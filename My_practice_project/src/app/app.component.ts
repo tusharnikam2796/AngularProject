@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'My_practice_project';
+  firstName : string = "tushar";
+  firstName1 = "tushar";
+  firstName2! : string;
+  surName : any;
+  formTitle:string="login form";
+
 }

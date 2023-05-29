@@ -1,0 +1,16 @@
+.container {
+    border: 1px solid rgb(178, 35, 35);
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin: auto;
+    background-color: #61a561
+}
+
+.btn {
+    background-color: rgb(226, 43, 150);
+    background-color: rgb(226, 43, 150);
+    padding: 13px 14px;
+    border: 2px solid black;
+    color: white;
+}
