@@ -2,8 +2,8 @@
 <div>
     <form class="container">
         <h2>{{formTitle}}</h2>
-        Name:   <input type="text"><br>  <br>
-        password:   <input type="text"><br>  <br>
+        Name: <input type="text"><br> <br>
+        password: <input type="text"><br> <br>
         <button class="btn">submit</button>
 
     </form>
@@ -17,13 +17,35 @@
 <p>{{testingInterpolation(34,40)}}</p>
 <!--assignment operator is not allow in interpolation
     = - assignment operator
-    == -equality operator
-    === - equality operator(it wii check value as well as datatype)-->
-    <p>{{isFevCity==false}}</p><br>
-    
-    <p>{{isFevCity===false}}</p>
+    == -equality operator----yes
+    === - equality operator(it wii check value as well as datatype)----yes-->
+<p>{{isFevCity==false}}</p><br>
+
+<p>{{isFevCity===false}}</p><br>
+
+<!-- 2)property binding-->
+
+<input type="text" [value]="myName"><br>
+<input type="radio" [checked]="gender"><br>
+<input type="text" value="{{myName}}"><br><br>
+<!--<input type="text" disabled="{{isDisabled}}"><br>--it is not applicable-->
+<input type="text" [disabled]="isDisabled">
+
+
+
+<!-- 2)event binding click,focus,blur-->
+<button (click)="testingEventBinding()">click</button>
+{{eventBindingData}}
+
+
+<!--two way data binding-->
+
+<input type="text" [(ngModel)]="twoWayBindingData">
+{{twoWayBindingData}}
+<button (click)="test()">click me...</button>
 
 
 
 
 
+<br><br><br><br><br>

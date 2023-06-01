@@ -15,10 +15,26 @@ export class AppComponent {
   studentName="tushar";
   amount=55000;
   isFevCity=true;
+  myName="tushar";
+  gender=true;
+  isDisabled= false;
+  eventBindingData=80000;
+  twoWayBindingData=789456;
+
 
   testingInterpolation ( a:number, b: number){
     
      return a + b;
+  }
+
+  testingEventBinding(){
+    this.eventBindingData=20000;
+    console.log(this.eventBindingData);
+    
+
+  }
+  test(){
+    console.log(this.twoWayBindingData);
   }
 
 
