@@ -14,3 +14,8 @@
     border: 2px solid black;
     color: white;
 }
+.user_name{
+    text-align: center;
+    color: rgb(139, 139, 54);
+    font-size: 30px;
+}

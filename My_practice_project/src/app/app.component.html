@@ -1,3 +1,4 @@
+<h2 class="user_name"> hello...{{studentName}}</h2><br>
 <div>
     <form class="container">
         <h2>{{formTitle}}</h2>
@@ -7,3 +8,22 @@
 
     </form>
 </div>
+<p>reaceived amount={{amount}}</p>
+<p>{{isFevCity}}</p>
+<!--<p>{{typeof(isFevCity)}}</p> we can not use typeof operator in interpolation -->
+<!--arthematic operation is allow in interpolation-->
+<p>{{40+60}}</p>
+<!--fumction/methods is allow in interpolation-->
+<p>{{testingInterpolation(34,40)}}</p>
+<!--assignment operator is not allow in interpolation
+    = - assignment operator
+    == -equality operator
+    === - equality operator(it wii check value as well as datatype)-->
+    <p>{{isFevCity==false}}</p><br>
+    
+    <p>{{isFevCity===false}}</p>
+
+
+
+
+

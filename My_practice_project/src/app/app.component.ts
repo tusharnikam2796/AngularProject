@@ -12,5 +12,15 @@ export class AppComponent {
   firstName2! : string;
   surName : any;
   formTitle:string="login form";
+  studentName="tushar";
+  amount=55000;
+  isFevCity=true;
+
+  testingInterpolation ( a:number, b: number){
+    
+     return a + b;
+  }
+
+
 
 }
