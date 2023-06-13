@@ -1,0 +1,28 @@
+<div>
+     <p *ngIf="show">directive works!</p>
+     <p *ngIf="toShow1">hey</p>
+     <p *ngIf="toShow=='tushar'">error</p>
+</div>
+
+<div class="div-container" *ngIf="toggle">
+
+</div>
+<button (click)="toggleEffect()">click</button>
+{{cars}}
+<ul *ngFor="let items of cars">
+     <li class="item-cars">{{items}}</li>
+</ul>
+<br>
+<table class="table-cars">
+     <tr>
+          <th>carName</th>
+          <th>prise</th>
+          <th>color</th>
+     </tr>
+     <tr *ngFor="let tableData of carsDetails">
+          <td>{{tableData.carName}}</td>
+          <td>{{tableData.prise}}</td>
+          <td>{{tableData.color}}</td>
+     </tr>
+</table>
+

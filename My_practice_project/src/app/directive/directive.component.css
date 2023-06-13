@@ -1,0 +1,22 @@
+.div-container{
+    border: 2px solid black;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(181, 217, 127);
+}
+.item-cars{
+    color: rgb(190, 40, 180);
+    font-size: 20px;
+    font-family: 'courier New';
+}
+.table-cars{
+    height: 300px;
+    width: 250px;
+    padding: 5px 5px;
+    background-color: rgb(157, 206, 190);
+}
+table,th,tr,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 10px 10px;
+}
