@@ -14,4 +14,8 @@ export class LoginComponent {
     this.router.navigateByUrl('landing')
     
   }
+  submit(formData:any){
+    console.log(formData);
+    
+  }
 }

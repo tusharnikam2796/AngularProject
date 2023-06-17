@@ -20,3 +20,21 @@ table,th,tr,td{
     border-collapse: collapse;
     padding: 10px 10px;
 }
+.div-contain{
+    color: red;
+    font-size: 30px;
+}
+
+.div-contain1{
+    color:pink;
+    font-size: 30px;
+}
+.container{
+    color:green ;
+}
+.container1{
+    color:orange ;
+}
+.container2{
+    color:tomato ;
+}

@@ -14,10 +14,13 @@
 </ul>
 <br>
 <table class="table-cars">
-     <tr>
+     <!-- <tr>
           <th>carName</th>
           <th>prise</th>
           <th>color</th>
+     </tr> -->
+     <tr>
+          <th *ngFor="let heading of tableHeadings">{{heading}}</th>
      </tr>
      <tr *ngFor="let tableData of carsDetails">
           <td>{{tableData.carName}}</td>
@@ -25,4 +28,33 @@
           <td>{{tableData.color}}</td>
      </tr>
 </table>
+
+<ul *ngFor="let data of data2">
+     <li>{{data}}</li>
+</ul>
+<ul *ngFor="let data of data3">
+     <li>{{data}}</li>
+</ul><br>
+<div [ngSwitch]="switchValue">
+     <h2 *ngSwitchCase="100">hiee</h2>
+     <h2 *ngSwitchCase="200">hello</h2>
+     <h2 *ngSwitchCase="300">heyy</h2>
+</div>
+
+
+<div class="div-contain">
+     i like satara
+</div><br>
+<div [ngClass]="color=='pink'? 'div-contain1' : 'div-contain'">
+     i like satara
+</div><br>
+
+<p style="color: orange; font-size: 20px;">i like pune</p><br>
+
+<p [ngStyle]="styleCss =='yellow'? {color:'yellow','font-size':'30px'}:{color:'green','font-size':'30px'}">i like goa</p>
+
+<h3 [class.container]="multiClass==200"
+[class.container1]="multiClass==300"
+[class.container2]="multiClass==400"
+>headingsss</h3>
 
