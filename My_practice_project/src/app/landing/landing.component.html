@@ -1,10 +1,17 @@
 <div class="division">
-    <h2 class="heading">My App....!</h2>
+    <h2 class="heading" *ngIf="!userName">My App....!</h2>
+    <h2 class="heading" *ngIf="userName">Welcome {{userName}}</h2>
     &nbsp;<button (click)="login()" class="btn">login</button>&nbsp;
     <button routerLink="/signUp" class="btn">signup</button>&nbsp;
     <button (click)="StudentActivity()" class="btn" >StudentActivity</button>&nbsp;
     <button routerLink="/student/studentDemo" class="btn">studentDemo</button>&nbsp;
-    <button (click)="directives()" class="btn">Directives</button>
+    <button (click)="directives()" class="btn">Directives</button>&nbsp;
+    <button (click)="show()" class="btn">JSON</button>&nbsp;
+    <button class="btn" (click)="lifeCycleHooks()">lifeCycleHooks</button>&nbsp;
+    <button (click)="parent()" class="btn">parent</button>&nbsp;
+    <button (click)="child()" class="btn">child</button>&nbsp;
+
+    
     
 
 

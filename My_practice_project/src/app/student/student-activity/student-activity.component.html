@@ -1,1 +1,18 @@
 <p>student-activity works!</p>
+<form [formGroup]="signInForm" *ngIf="showForm">
+    <label>password:</label><br>
+    <input [type]="showPassword ? 'text':'password'" formControlName="password" (keyup)="passwordValue()">
+    <button (click)="showpass()">show</button><br>
+    <span class="err-student" *ngIf="!match && signInForm.get('password')?.dirty">*password and confPassword should be same</span><br>
+    <label>confirm password:</label><br>
+    <input type="text" formControlName="confirmPassword" (keyup)="confPasswordValue()"><br>
+    <span class="err-student" *ngIf="!match && signInForm.get('confirmPassword')?.dirty">*password and confPassword should be same</span><br>
+    <label>Name:</label><br>
+    <input type="text" formControlName="name"><br>
+    <span class="err-student" *ngIf="signInForm.get('name')?.errors?.['Err']">*name shoiuld not contain copy word</span>
+    <span class="err-student" *ngIf="signInForm.get('name')?.errors?.['whiteSpace']">*spaces is not allow</span>
+
+    
+</form>
+<button (click)="show()">submit</button>
+<button (click)="getData()">getData</button>
