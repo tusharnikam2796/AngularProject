@@ -1,0 +1,13 @@
+.tabelClass{
+    position: relative;
+    top: 10px;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(157, 188, 188);
+}
+table,tr,td,th{
+    border: 2px solid red;
+    border-collapse: collapse;
+    padding: 4px 4px;
+    background-color: rgb(208, 164, 202);
+}

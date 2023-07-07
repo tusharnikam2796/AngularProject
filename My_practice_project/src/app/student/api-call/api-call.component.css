@@ -1,0 +1,40 @@
+.div-signup{
+    
+}
+.form-signup{
+    border: 2px solid rgb(14, 12, 12);
+    width: 400px;
+    height: 500px;
+    text-align: center;
+    margin: auto;
+    background-color: rgb(230, 206, 214);
+
+}
+.heading-signup{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(54, 9, 96);
+
+}
+.label-signup{
+    position: relative;
+    top: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.input-signup{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    top: 5px;
+}
+.btn-signup{
+    font-size: medium;
+    background-color: rgb(238, 214, 178);
+}
+.err-signup{
+    color: red;
+    font-size: 12px;
+}
+.err-signup1{
+    color: green;
+    font-size: 12px;
+
+}

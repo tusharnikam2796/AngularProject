@@ -12,6 +12,7 @@ import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.com
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { SharedModule } from './shared/shared.module';
+import { FormComponent } from './form/form.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { SharedModule } from './shared/shared.module';
     LifeCycleHooksComponent,
     ParentComponent,
     ChildComponent,
+    FormComponent,
   
   ],
   imports: [

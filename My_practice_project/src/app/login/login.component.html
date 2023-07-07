@@ -2,8 +2,8 @@
     <form class="container" #loginForm="ngForm">
         <h2>login..</h2>
         <label class="label">UserName:</label><br>
-        <input class="input" type="text" name="userName" ngModel #userName="ngModel" value="userName" pattern="[a-zA-z0-9]*$" required
-            minlength="8"><br>
+        <input class="input" type="text" name="userName" ngModel #userName="ngModel" value="userName"
+            pattern="[a-zA-z0-9]*$" required minlength="8"><br>
         <span class="span-err" *ngIf="userName.errors?.['pattern']">*userName only should have alphabates & integers &
             space is not req</span>
         <span class="span-err" *ngIf="userName.errors?.['required']&& userName.touched">*userName required</span>
@@ -12,13 +12,20 @@
 
         <label class="label">password:</label><br>
         <input class="input" type="text" name="password" ngModel #password="ngModel" minlength="8"
-            pattern="[A-Z]{1}[a-zA-Z0-9!@#$%^&*]{9}$"><br>
+            pattern="[A-Z]{1}[a-zA-Z0-9!@#$%^&*]{10}$" required><br>
         <span class="span-err" *ngIf="password.errors?.['minlength']">*password should be atleast 8
             characters</span>
-        <span class="span-err" *ngIf="password.errors?.['pattern'] && !password.errors?.['minlength'] ">*please match the pattern</span><br>
+        <span class="span-err" *ngIf="password.errors?.['pattern'] && !password.errors?.['minlength'] ">*please match
+            the pattern</span><br>
         <label class="label">confirm password:</label><br>
-        <input class="input" type="text"><br><br>
-        <button class="btn" [disabled]="!loginForm.valid" (click)="submit(loginForm.value)" >submit</button>&nbsp;
+        <input class="input" type="text" name="confPassword" ngModel #confPassword="ngModel" minlength="8"
+            pattern="[A-Z]{1}[a-zA-Z0-9!@#$%^&*]{10}$" required><br>
+        <span class="span-err" *ngIf="confPassword.errors?.['minlength']">*password should be atleast 8
+            characters</span>
+        <span class="span-err" *ngIf="confPassword.errors?.['pattern'] && !confPassword.errors?.['minlength'] ">*please match
+            the pattern</span><br>
+
+        <button class="btn" [disabled]="!loginForm.valid" (click)="submit(loginForm.value)">submit</button>&nbsp;
         <button (click)="back()" class="btn">back</button>
 
     </form>

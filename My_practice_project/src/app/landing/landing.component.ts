@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from '../data.service';
 import { StudentDataService } from '../student/student-data.service';
+import { CommanApiCallService } from '../student/comman-api-call.service';
 
 @Component({
   selector: 'app-landing',
@@ -33,7 +34,9 @@ export class LandingComponent {
     massage: "pass",
     fevSub: ['maths', 'polity', 'eco']
   };
-  constructor(private router: Router, private dataService: DataService, private studentDataService: StudentDataService) {
+  getApiResp: any;
+  constructor(private router: Router, private dataService: DataService, private studentDataService: StudentDataService,
+    private commanApiCallService:CommanApiCallService) {
   }
   ngOnInit() {
     this.userName = this.dataService.userFullName;
@@ -80,6 +83,35 @@ export class LandingComponent {
     
     
   }
+  apiCall(){
+    this.router.navigateByUrl('/student/apiCall')
+  }
+  getApiCall(){
+    console.log('get api call');
+    let endpoint="student";
+    this.commanApiCallService.getApiCall(endpoint).subscribe(resp=>{
+      this.getApiResp=resp;
+    })
+    console.log(this.getApiResp);
+    
+  }
+  form(){
+    this.router.navigateByUrl('form')
+  }
+  getById(){
+    let endpoint="form";
+    this.commanApiCallService.getApiById(endpoint,2).subscribe(data=>{
+      console.log(data);
+      
+    })
 
+  }
+  deleteApi(){
+    let endpoint="form";
+    this.commanApiCallService.deleteApiById(3,endpoint).subscribe(deleteData=>{
+      console.log(deleteData);
+      
+    })
+  }
 
 }

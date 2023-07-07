@@ -1,0 +1,22 @@
+<form [formGroup]="form">
+    <label>Name:</label><br>
+    <input type="text" formControlName="name"><br>
+    <label>Surname:</label><br>
+    <input type="text" formControlName="surname"><br>
+    <label>MobNo</label><br>
+    <input type="text" formControlName="mobno"><br><br>
+    <button (click)="save()">save</button>
+</form><br>
+<div *ngIf="adminData" class="tabelClass">
+    <table>
+        <tr>
+            <th *ngFor="let heading of tabelHeading">{{heading}}</th>
+        </tr>
+        <tr *ngFor="let data of adminData">
+            <td>{{data.Name}}</td>
+            <td>{{data.SurName}}</td>
+            <td>{{data.MobNo}}</td>
+        </tr>
+
+    </table>
+</div>

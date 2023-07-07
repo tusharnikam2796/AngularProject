@@ -1,0 +1,34 @@
+{
+  "admin": [
+    {
+      "Name": "swapnil",
+      "SurName": "shinde",
+      "MobNo": "125235353"
+    }
+  ],
+  "student": [
+    {
+      "userName": "tusharnikam2796",
+      "password": "Tushar@2796",
+      "confPassword": "Tushar@2796",
+      "id": 1
+    }
+  ],
+  "owner": [],
+  "form": [
+    {
+      "form": {
+        "name": "tushar",
+        "surname": "nikam",
+        "mobno": "1123545"
+      },
+      "id": 1
+    },
+    {
+      "Name": "kumar",
+      "SurName": "shinde",
+      "MobNo": "644466446",
+      "id": 2
+    }
+  ]
+}
