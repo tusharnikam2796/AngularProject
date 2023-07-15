@@ -7,16 +7,30 @@
     <input type="text" formControlName="mobno"><br><br>
     <button (click)="save()">save</button>
 </form><br>
+<div>
+    <input type="text" placeholder="search here..." (keyup)="inputVal($event)">
+    <button (click)="search()">search</button>
+</div>
 <div *ngIf="adminData" class="tabelClass">
     <table>
         <tr>
             <th *ngFor="let heading of tabelHeading">{{heading}}</th>
         </tr>
-        <tr *ngFor="let data of adminData">
+        <tr *ngFor="let data of adminData | filter: searchBoxValue">
             <td>{{data.Name}}</td>
             <td>{{data.SurName}}</td>
             <td>{{data.MobNo}}</td>
         </tr>
 
     </table>
+</div><br><br>
+
+<div>
+     {{myName | uppercase}} <br>
+    {{date | date}} <br>
+    {{date | date:'shortDate'}} <br>
+    {{date | date:'fullDate'}} <br>
+    {{date | date | lowercase}}...chaining of pipe(multiple pipes)
+
+
 </div>

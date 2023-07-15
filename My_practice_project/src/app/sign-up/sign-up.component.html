@@ -2,7 +2,7 @@
     <form class="form-signup" [formGroup]="signUpForm">
         <h2 class="heading-signup">SignUp Form</h2><br>
         <label class="label-signup"> Fullname:</label><br>
-        <input class="input-signup" type="text" formControlName="fullname"><br>
+        <input class="input-signup" type="text" formControlName="fullname" appCharOnly><br>
         <span class="err-signup1"
             *ngIf="!signUpForm.get('fullname')?.touched && !signUpForm.get('fullname')?.valid && !signUpForm.get ('fullname')?.dirty">*Hint
             : enter your fullname here </span>
@@ -21,7 +21,7 @@
             required</span>
         <span class="err-signup" *ngIf="signUpForm.get('email')?.errors?.['pattern']">*match the pattern</span><br>
         <label class="label-signup"> Contact:</label><br>
-        <input class="input-signup" type="text" formControlName="contact" maxlength="10"><br>
+        <input class="input-signup" type="text" formControlName="contact" maxlength="10" appNumbersOnly><br>
         <span class="err-signup"
             *ngIf="signUpForm.get('contact')?.errors?.['required'] && signUpForm.get('contact')?.touched">*contact is
             required</span>
@@ -31,11 +31,15 @@
         <label class="label-signup"> Address:</label><br>
         <input class="input-signup" type="text" formControlName="address"><br>
         <label class="label-signup"> State:</label><br>
-        <input class="input-signup" type="text" formControlName="state"><br>
+        <input class="input-signup" type="text" formControlName="state" appCharOnly><br>
         <label class="label-signup"> Gender:</label><br>
         <input class="input-signup" type="radio" name="gender" value="Male" formControlName="gender">Male<br>
         <input class="input-signup" type="radio" name="gender" value="Female" formControlName="gender">Female<br>
         <input class="input-signup" type="radio" name="gender" value="Other" formControlName="gender">Other<br>
+        <label class="label-signup">password:</label><br>
+        <input class="input-signup" type="text" formControlName="password"><br>
+        <label class="label-signup">confirm password:</label><br>
+        <input class="input-signup" type="text" formControlName="confPassword"><br><br>
         <button class="btn-signup" [disabled]="!signUpForm.valid" (click)="submit()">submit</button>&nbsp;
 
 

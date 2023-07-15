@@ -35,6 +35,7 @@ export class LandingComponent {
     fevSub: ['maths', 'polity', 'eco']
   };
   getApiResp: any;
+  data: any;
   constructor(private router: Router, private dataService: DataService, private studentDataService: StudentDataService,
     private commanApiCallService:CommanApiCallService) {
   }
@@ -112,6 +113,20 @@ export class LandingComponent {
       console.log(deleteData);
       
     })
+  }
+  update(){
+    this.commanApiCallService.journey='update';
+    let endpoint='owner';
+    this.commanApiCallService.getApiById(endpoint,5).subscribe(response=>{
+      this.data=response;
+      
+    });
+    if (this.data) {
+      this.commanApiCallService.getDataById=this.data;
+      this.router.navigateByUrl('signUp')
+      
+    }
+    
   }
 
 }

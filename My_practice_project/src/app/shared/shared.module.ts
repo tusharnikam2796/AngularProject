@@ -3,12 +3,16 @@ import { CommonModule } from '@angular/common';
 import { StudentDemoComponent } from '../student/student-demo/student-demo.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NumbersOnlyDirective } from '../student/numbers-only.directive';
+
 
 
 
 @NgModule({
   declarations: [
-    StudentDemoComponent
+    StudentDemoComponent,
+    NumbersOnlyDirective,
+    
 
   ],
   imports: [
@@ -21,6 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     StudentDemoComponent,
     FormsModule,
     ReactiveFormsModule,
+    NumbersOnlyDirective,
+    
 ]
 })
 export class SharedModule { }

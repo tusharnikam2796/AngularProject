@@ -7,12 +7,14 @@ import { StudentDemoComponent } from './student-demo/student-demo.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { ApiCallComponent } from './api-call/api-call.component';
+import { NumbersOnlyDirective } from './numbers-only.directive';
 
 
 @NgModule({
   declarations: [
     StudentActivityComponent,
     ApiCallComponent,
+    // NumbersOnlyDirective,
     //StudentDemoComponent
   ],
   imports: [

@@ -10,7 +10,11 @@ import { CommanApiCallService } from '../student/comman-api-call.service';
 export class FormComponent {
   form!:FormGroup;
   adminData:any;
+  date= new Date;
+  searchBoxValue:any;
+  myName='tushar tanaji nikam';
   tabelHeading:any[]=['Name','Surname','MobNo'];
+  val: any;
   constructor (private fb:FormBuilder,private commanApiCallService:CommanApiCallService){}
   ngOnInit(){
     console.log('....');
@@ -41,7 +45,7 @@ export class FormComponent {
     
   }
   getData(){
-    let endpoint="admin";
+    let endpoint="form";
     this.commanApiCallService.getApiCall(endpoint).subscribe(data=>{
       console.log(data);
       this.adminData=data;
@@ -49,6 +53,17 @@ export class FormComponent {
     })
 
 
+  }
+  inputVal(inpValue:any){
+    console.log('value',inpValue.target.value);
+    this.val=inpValue.target.value;
+
+    
+  }
+  search(){
+    console.log();
+    this.searchBoxValue=this.val;
+    
   }
 
 

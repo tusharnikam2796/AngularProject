@@ -14,7 +14,61 @@
       "id": 1
     }
   ],
-  "owner": [],
+  "owner": [
+    {
+      "fullname": "tushar nikam",
+      "email": "tushar123@gmail.com",
+      "contact": "5454545444",
+      "address": "satara",
+      "state": "maharashtra",
+      "gender": "Male",
+      "id": 1
+    },
+    {
+      "fullname": "kumar shinde",
+      "email": "kumar456@gmail.com",
+      "contact": "8778776845",
+      "address": "pune",
+      "state": "maharashtra",
+      "gender": "Male",
+      "password": "kumar@123",
+      "confPassword": "kumar@123",
+      "id": 2
+    },
+    {
+      "fullname": "swapnil shnide",
+      "email": "swapnil789@gmail.com",
+      "contact": "7865768766",
+      "address": "mumbai",
+      "state": "maharashtra",
+      "gender": "Male",
+      "password": "swapnil@123",
+      "confPassword": "swapnil@123",
+      "id": 3
+    },
+    {
+      "fullname": "rohit shinde",
+      "email": "rohit456@gmail.com",
+      "contact": "9949445555",
+      "address": "sangli",
+      "state": "maharashtra",
+      "gender": "Male",
+      "password": "rohit@123",
+      "confPassword": "rohit@123",
+      "id": 4
+    },
+    {
+      "fullname": "tushar tanaji nikam",
+      "email": "tusharnikam2796@gmail.com",
+      "contact": "9404106046",
+      "address": "pune",
+      "state": "maharashtra",
+      "gender": "Male",
+      "password": "Tushar@271996",
+      "confPassword": "Tushar@271996",
+      "id": 5
+    }
+  ],
   "form": [
     {
       "form": {
@@ -29,6 +83,30 @@
       "SurName": "shinde",
       "MobNo": "644466446",
       "id": 2
+    },
+    {
+      "Name": "tushar",
+      "SurName": "nikam",
+      "MobNo": "7350375919",
+      "id": 3
+    },
+    {
+      "Name": "tushar",
+      "SurName": "nikam",
+      "MobNo": "7350375919",
+      "id": 4
+    },
+    {
+      "Name": "rohit ",
+      "SurName": "shinde",
+      "MobNo": "487664654",
+      "id": 5
+    },
+    {
+      "Name": "bhushan",
+      "SurName": "nikam",
+      "MobNo": "9535535454",
+      "id": 6
     }
   ]
 }

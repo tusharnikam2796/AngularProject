@@ -13,6 +13,9 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { SharedModule } from './shared/shared.module';
 import { FormComponent } from './form/form.component';
+import { CharOnlyDirective } from './char-only.directive';
+import { FilterPipe } from './filter.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -26,6 +29,8 @@ import { FormComponent } from './form/form.component';
     ParentComponent,
     ChildComponent,
     FormComponent,
+    CharOnlyDirective,
+    FilterPipe,
   
   ],
   imports: [
@@ -33,7 +38,8 @@ import { FormComponent } from './form/form.component';
     AppRoutingModule,
     //FormsModule,
     //ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

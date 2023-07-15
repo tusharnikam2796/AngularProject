@@ -6,6 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class CommanApiCallService {
   url = "http://localhost:3000/";
+  getDataById: any;
+  journey!: string;
   // postUrl="http://localhost:3000/posts";
   // studentUrl="http://localhost:3000/studentData";
 
@@ -33,6 +35,11 @@ export class CommanApiCallService {
   deleteApiById(id:any,endpoint:string){
     let deleteId=this.url+endpoint+'/'+id;
     return this.httpClient.delete(deleteId)
+  }
+  putApiCall(endpoint:any,signUpRequest:any,id:any){
+    let url=this.url+endpoint+'/'+id;
+    return this.httpClient.put(url,signUpRequest);
+
   }
 
 
