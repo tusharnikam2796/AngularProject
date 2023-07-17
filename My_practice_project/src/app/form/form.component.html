@@ -33,4 +33,56 @@
     {{date | date | lowercase}}...chaining of pipe(multiple pipes)
 
 
-</div>
+</div><br><br>
+
+<button mat-raised-button color="primary">Primary</button>
+<button mat-raised-button color="accent">Accent</button>
+<br><br><br>
+<input type="checkbox">checkbox <br><br><br>
+<mat-checkbox>checkbox</mat-checkbox><br><br>
+<form [formGroup]="materialForm">
+    <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName">
+        <mat-hint *ngIf="!materialForm.get('firstName')?.touched">Enter First name here</mat-hint>
+        <mat-error *ngIf="materialForm.get('firstName')?.errors?.['required']">First name is required</mat-error>
+        <mat-error *ngIf="materialForm.get('firstName')?.errors?.['pattern']">pattern not matched</mat-error>
+        <mat-error *ngIf="!materialForm.get('firstName')?.errors?.['pattern'] && materialForm.get('firstName')?.errors?.['minlength']">minimum 2 characters required</mat-error>
+
+    </mat-form-field>&nbsp;
+    <mat-form-field>
+        <mat-label>Middle Name</mat-label>
+        <input matInput formControlName="middleName">
+        <mat-hint>Enter First name here</mat-hint>
+        <mat-error *ngIf="materialForm.get('middleName')?.errors?.['required']">middle name is required</mat-error>
+        <mat-error *ngIf="materialForm.get('middleName')?.errors?.['pattern']">pattern not matched</mat-error>
+
+
+    </mat-form-field>&nbsp;
+    <mat-form-field>
+        <mat-label>last Name</mat-label>
+        <input matInput formControlName="lastName">
+        <mat-hint>Enter First name here</mat-hint>
+        <mat-error *ngIf="materialForm.get('lastName')?.errors?.['required']">last name is required</mat-error>
+        <mat-error *ngIf="materialForm.get('lastName')?.errors?.['pattern']">pattern not matched</mat-error>
+
+    </mat-form-field>&nbsp;<br><br>
+    <mat-form-field>
+        <mat-label>password</mat-label>
+        <input matInput formControlName="password" [type]="showPass? 'text' : 'password'" (keyup)="passvalue()">
+        <mat-icon matSuffix (click)="visiblepass()" *ngIf="!showPass">visibility</mat-icon>
+        <mat-icon matSuffix (click)="visiblepass()" *ngIf="showPass">visibility_off</mat-icon>
+        <mat-hint>Enter password here</mat-hint>
+        <mat-error *ngIf="!passMatch && materialForm.get('password')?.dirty">password and conf password should be same</mat-error>
+    </mat-form-field>&nbsp;
+    <mat-form-field>
+        <mat-label>confirm password</mat-label>
+        <input matInput formControlName="confPassword" [type]="showConfpass? 'text' : 'password' " (keyup)="confPassvalue()">
+        <mat-icon matSuffix (click)="visibleConfPass()" *ngIf="!showConfpass">visibility</mat-icon>
+        <mat-icon matSuffix (click)="visibleConfPass()" *ngIf="showConfpass">visibility_off</mat-icon>
+        <mat-hint>Enter confirm password here</mat-hint>
+        <mat-error *ngIf="!confPassMatch && materialForm.get('confPassword')?.dirty">password and conf password should be same</mat-error>
+
+    </mat-form-field>
+
+</form><br><br><br>

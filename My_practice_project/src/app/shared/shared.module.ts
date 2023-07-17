@@ -4,6 +4,11 @@ import { StudentDemoComponent } from '../student/student-demo/student-demo.compo
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NumbersOnlyDirective } from '../student/numbers-only.directive';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+
 
 
 
@@ -20,12 +25,21 @@ import { NumbersOnlyDirective } from '../student/numbers-only.directive';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatIconModule
+    
   ],
   exports:[
     StudentDemoComponent,
     FormsModule,
     ReactiveFormsModule,
     NumbersOnlyDirective,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatIconModule
     
 ]
 })
