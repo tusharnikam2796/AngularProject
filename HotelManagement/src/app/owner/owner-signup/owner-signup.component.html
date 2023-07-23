@@ -1,5 +1,54 @@
-<div>
-    <form [formGroup]="ownerSignupForm">
-
+<div class="ownersignUp-div">
+    <form [formGroup]="ownerSignupForm" class="signupForm">
+        <mat-toolbar class="toolbar" color="primary">
+            <span class="span-toolbar"><mat-icon> local_hotel</mat-icon> Owner Ragistration....</span>
+        </mat-toolbar><br>
+        <!-- <h2 class="h2">Owner Details..</h2> -->
+        <mat-form-field class="form-field">
+            <mat-label>Full Name</mat-label>
+            <input matInput formControlName="fullName">
+            <mat-hint *ngIf="!ownerSignupForm.get('fullName')?.touched">Enter Full name here</mat-hint>
+            <mat-error *ngIf="ownerSignupForm.get('fullName')?.errors?.['required']">Full name is required</mat-error>
+            <mat-error *ngIf="ownerSignupForm.get('fullName')?.errors?.['pattern']">pattern not matched</mat-error>
+            <mat-error *ngIf="!ownerSignupForm.get('fullName')?.errors?.['pattern'] && ownerSignupForm.get('fulltName')?.errors?.['minlength']">minimum 2 characters required</mat-error>
+        </mat-form-field>&nbsp;<br>
+        <mat-form-field class="form-field">
+            <mat-label>PAN Number</mat-label>
+            <input matInput formControlName="panNumber">
+        </mat-form-field><br>
+        <mat-form-field class="form-field">
+            <mat-label>UserName</mat-label>
+            <input matInput formControlName="username">
+        </mat-form-field>&nbsp;<br>
+        <mat-form-field class="form-field">
+            <mat-label>Contact</mat-label>
+            <span matPrefix>+91 &nbsp;</span>
+            <input type="tel" matInput placeholder="555-555-1234" formControlName="contact">
+            <mat-icon matSuffix>mode_edit</mat-icon>
+        </mat-form-field>&nbsp;<br>
+        <mat-form-field class="form-field">
+            <mat-label>Enter your email</mat-label>
+            <input matInput placeholder="pat@example.com" formControlName="email">
+        </mat-form-field><br>
+        <mat-radio-group formControlName="gender">
+            <mat-label>gender :</mat-label>
+            <mat-radio-button  value="Male" >Male</mat-radio-button>
+            <mat-radio-button  value="Female" >Female</mat-radio-button>
+            <mat-radio-button  value="Other" >Other</mat-radio-button>
+        </mat-radio-group><br><br>
+        <mat-form-field class="form-field">
+            <mat-label>password</mat-label>
+            <input matInput formControlName="password" [type]="showPass? 'text' : 'password'">
+            <mat-icon matSuffix (click)="visiblepass()" *ngIf="!showPass">visibility</mat-icon>
+            <mat-icon matSuffix (click)="visiblepass()" *ngIf="showPass">visibility_off</mat-icon>
+        </mat-form-field>&nbsp;<br>
+        <mat-form-field class="form-field">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput formControlName="confirmPassword" [type]="showConfPass? 'text' : 'password'">
+            <mat-icon matSuffix (click)="visibleconfPass()" *ngIf="!showConfPass">visibility</mat-icon>
+            <mat-icon matSuffix (click)="visibleconfPass()" *ngIf="showConfPass">visibility_off</mat-icon>
+        </mat-form-field><br>
+        <button mat-raised-button color="primary" (click)="submit()">Submit</button>&nbsp;
+        <button mat-raised-button color="accent" (click)="back()">back</button>
     </form>
 </div>

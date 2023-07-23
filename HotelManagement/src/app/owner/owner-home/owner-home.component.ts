@@ -17,5 +17,8 @@ export class OwnerHomeComponent {
   // ownerSignup(){
   //   this.router.navigateByUrl('/owner/ownerSignup')
   // }
+  back(){
+    this.router.navigateByUrl('home')
+  }
 
 }

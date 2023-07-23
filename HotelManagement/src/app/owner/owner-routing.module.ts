@@ -6,6 +6,7 @@ import { OwnerSignupComponent } from './owner-signup/owner-signup.component';
 
 const routes: Routes = [
   {path:'',component:OwnerHomeComponent},
+  {path:'ownerHome',component:OwnerHomeComponent},
   {path:'ownerLogin',component:OwnerLoginComponent},
   {path:'ownerSignup',component:OwnerSignupComponent}
 ];

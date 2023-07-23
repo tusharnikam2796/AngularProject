@@ -1,4 +1,14 @@
-<button (click)="journey('admin')">Admin</button>
-<button (click)="journey('owner')">Owner</button>
-<button (click)="journey('User')">User</button>
-<button *ngIf="showLogout">logout</button>
+<div class="all-div">
+<mat-toolbar color="primary">
+    <h2 class="h2"><mat-icon> local_hotel</mat-icon>&nbsp;HotelWala..</h2>
+    <div class="div-home">
+
+    </div>
+<button mat-raised-button color="accent" (click)="journey('admin')">Admin</button>&nbsp;
+<button mat-raised-button color="accent"(click)="journey('owner')">Owner</button>&nbsp;
+<button mat-raised-button color="accent"(click)="journey('User')">User</button>&nbsp;
+<button mat-raised-button color="accent" *ngIf="showLogout">logout</button>
+</mat-toolbar>
+
+
+</div>

@@ -1,4 +1,10 @@
-<div>
-    <button (click)="login()">Owner Login</button><br><br>
-    <a routerLink="/owner/ownerSignup" >Don't Have An Account Please SigUp Here..?</a>
-</div>
+<mat-toolbar color="primary">
+    <h2 class="h2"><mat-icon> local_hotel</mat-icon>&nbsp;HotelWala..</h2>
+    <div class="div-home">
+
+    </div>
+    <button mat-raised-button color="accent" (click)="back()">back</button>&nbsp;
+    <button mat-raised-button color="accent" (click)="login()">Owner Login</button>&nbsp;
+    <button routerLink="/owner/ownerSignup" mat-raised-button color="accent">Owner SigUp Here..</button>&nbsp;
+    <button routerLink="" mat-raised-button color="accent">My Hotel</button>
+</mat-toolbar>

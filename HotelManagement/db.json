@@ -1,7 +1,84 @@
 {
   "admin": [],
-  "owner": [],
+  "owner": [
+    {
+      "fullName": "tushar nikam",
+      "panNumber": "BZIUPN330A",
+      "username": "tushar123",
+      "email": "tusharnikam2796@gmail.com",
+      "contact": "7350375919",
+      "gender": null,
+      "password": "tushar@2796",
+      "confirmPassword": "tushar@2796",
+      "id": 1
+    },
+    {
+      "fullName": "bhushan nikam",
+      "panNumber": "HUDUIN450D",
+      "username": "bhushan456",
+      "email": "bhu123@gmail.com",
+      "contact": "7894646953",
+      "gender": null,
+      "password": "bhu123",
+      "confirmPassword": "bhu123",
+      "id": 2
+    },
+    {
+      "fullName": "kumar shinde",
+      "panNumber": "dfdfvfgcg",
+      "username": "kumar123",
+      "email": "aghgsahgh@gmail.com",
+      "contact": "1224584125",
+      "gender": "",
+      "password": "kumar123",
+      "confirmPassword": "kumar123",
+      "id": 3
+    },
+    {
+      "fullName": "rohit shinde",
+      "panNumber": "ADGHXH456D",
+      "username": "rohit123",
+      "email": "rohit@gmail.com",
+      "contact": "7977777979",
+      "gender": "Male",
+      "password": "rohit123",
+      "confirmPassword": "rohit123",
+      "id": 4
+    },
+    {
+      "fullName": "swapnil shinde",
+      "panNumber": "AGHJJH896H",
+      "username": "swapnil789",
+      "email": "swapnil123@gmail.com",
+      "contact": "7894564515",
+      "gender": "Male",
+      "password": "swapnil789",
+      "confirmPassword": "swapnil789",
+      "id": 5
+    },
+    {
+      "fullName": "swapinl",
+      "panNumber": "adgfdgdgg",
+      "username": "swapnil",
+      "email": "ffsfhafhghs",
+      "contact": "4424224242",
+      "gender": "Male",
+      "password": "hasgshygh",
+      "confirmPassword": "sahahhghga",
+      "id": 6
+    },
+    {
+      "fullName": "swapinl",
+      "panNumber": "adgfdgdgg",
+      "username": "swapnil",
+      "email": "ffsfhafhghs",
+      "contact": "4424224242",
+      "gender": "Male",
+      "password": "hasgshygh",
+      "confirmPassword": "sahahhghga",
+      "id": 7
+    }
+  ],
   "user": [],
   "hotelDetails": []
-
 }
