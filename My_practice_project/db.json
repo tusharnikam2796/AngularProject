@@ -58,14 +58,14 @@
       "id": 4
     },
     {
-      "fullname": "tushar tanaji nikam",
-      "email": "tusharnikam2796@gmail.com",
-      "contact": "9404106046",
-      "address": "pune",
+      "fullname": "bhushan nikam",
+      "email": "bu123@gmail.com",
+      "contact": "9884541212",
+      "address": "kolhapur",
       "state": "maharashtra",
       "gender": "Male",
-      "password": "Tushar@271996",
-      "confPassword": "Tushar@271996",
+      "password": "bhu123",
+      "confPassword": "bhu123",
       "id": 5
     }
   ],
@@ -107,6 +107,12 @@
       "SurName": "nikam",
       "MobNo": "9535535454",
       "id": 6
+    },
+    {
+      "Name": "tushar",
+      "SurName": "nikam",
+      "MobNo": "8999055962",
+      "id": 7
     }
   ]
 }

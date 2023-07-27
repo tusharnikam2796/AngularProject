@@ -25,6 +25,7 @@ import { NumbersOnlyDirective } from './numbers-only.directive';
     SharedModule,
     
     
-  ]
+  ],
+  
 })
 export class StudentModule { }
