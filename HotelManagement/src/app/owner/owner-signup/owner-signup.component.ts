@@ -29,14 +29,14 @@ export class OwnerSignupComponent {
 
   ownerSignup(){
      this.ownerSignupForm=this.formBuilder.group({
-      fullName:['',[Validators.required, Validators.pattern('[a-zA-Z ]*$'), Validators.minLength(2)]],
-      panNumber:['',],
-      username:[''],
-      email:['',],
-      contact:['',],
-      gender:['',],
-      password:['',],
-      confirmPassword:['',],
+      fullName:['',[Validators.required, Validators.pattern('[a-zA-Z ]*$'), Validators.minLength(2),this.commonService.whiteSpaceValidator]],
+      userName:['',[Validators.required,Validators.pattern('[a-zA-z0-9]*$'),Validators.minLength(2)]],
+      panNumber:['',[Validators.required,Validators.pattern('[A-Z]{5}[0-9]{4}[A-Z]{1}$')]],
+      contact:['',[Validators.required,Validators.pattern('[0-9]*$')]],
+      email:['',[Validators.required,Validators.pattern('[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3}$')]],
+      gender:['',[Validators.required]],
+      password:['',[Validators.required]],
+      confirmPassword:['',[Validators.required]],
      })
   }
 
@@ -52,7 +52,7 @@ export class OwnerSignupComponent {
   submit(){
     console.log(this.ownerSignupForm.value);
     let request={
-      fullName:this.ownerSignupForm.value.fullName,
+      fullName:this.ownerSignupForm.value.fullName?.split(" ").join(' '),
       panNumber:this.ownerSignupForm.value.panNumber,
       username:this.ownerSignupForm.value.username,
       email:this.ownerSignupForm.value.email,
@@ -67,9 +67,9 @@ export class OwnerSignupComponent {
       this.postResponce=resp
       
     })
-    if (this.postResponce?.id) {
-      this.router.navigateByUrl('owner/ownerLogin')
-    }
+    //if (this.postResponce?.id) {
+      this.router.navigateByUrl('owner/ownerSucess')
+    //}
     
   }
 

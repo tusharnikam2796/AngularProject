@@ -1,10 +1,50 @@
-<mat-toolbar color="primary">
-    <h2 class="h2"><mat-icon> local_hotel</mat-icon>&nbsp;HotelWala..</h2>
-    <div class="div-home">
+<div class="container">
 
+    <mat-toolbar color="primary">
+        <h2 class="h2"><mat-icon> local_hotel</mat-icon>&nbsp;GetSetBooking..</h2>
+        <div class="div-home">
+
+        </div>
+        <button mat-raised-button color="accent" (click)="back()">back</button>&nbsp;
+
+        <button routerLink="" mat-raised-button color="accent">My Hotel</button>
+    </mat-toolbar><br>
+    <div class="div-form">
+        <form [formGroup]="ownerLoginForm" class="ownerLogin-div">
+            <mat-toolbar color="accent" class="mat-toolbar">
+                <span><mat-icon> local_hotel</mat-icon> Owner Login....</span>
+            </mat-toolbar><br>
+            <!-- <mat-card>
+                <mat-card-header>
+                    <mat-card-title>owner Login</mat-card-title>
+                </mat-card-header>
+            </mat-card><br> -->
+            <mat-form-field class="login-formField">
+                <mat-label>UserName</mat-label>
+                <input matInput formControlName="username" (keyup)="userInput()">
+                <mat-hint *ngIf="!ownerLoginForm.get('username')?.touched">Enter UserName Here</mat-hint>
+                <mat-error *ngIf="ownerLoginForm.get('username')?.errors?.['required']">UserName is required</mat-error>
+                <mat-error *ngIf="ownerLoginForm.get('username')?.errors?.['pattern']">pattern is not match</mat-error>
+                <mat-error
+                    *ngIf="ownerLoginForm.get('username')?.errors?.['pattern'] && ownerLoginForm.get('username')?.errors?.['minlength']">minimum
+                    2 characters required</mat-error>
+            </mat-form-field>&nbsp;<br>
+            <mat-form-field class="login-formField">
+                <mat-label>password</mat-label>
+                <input matInput formControlName="password" [type]="showPass? 'text' : 'password'">
+                <mat-icon matSuffix (click)="visiblepass()" *ngIf="!showPass">visibility</mat-icon>
+                <mat-icon matSuffix (click)="visiblepass()" *ngIf="showPass">visibility_off</mat-icon>
+                <mat-hint *ngIf="!ownerLoginForm.get('password')?.touched">Enter password Here</mat-hint>
+                <mat-error *ngIf="ownerLoginForm.get('password')?.errors?.['required']">password is required</mat-error>
+
+            </mat-form-field>&nbsp;<br><br>
+            <button mat-raised-button color="primary" (click)="login()" class="login-button">login</button><br><br>
+            <a routerLink="/owner/ownerSignup">New Owner Ragistration..?</a>&nbsp;
+
+
+        </form>
     </div>
-    <button mat-raised-button color="accent" (click)="back()">back</button>&nbsp;
-    <button mat-raised-button color="accent" (click)="login()">Owner Login</button>&nbsp;
-    <button routerLink="/owner/ownerSignup" mat-raised-button color="accent">Owner SigUp Here..</button>&nbsp;
-    <button routerLink="" mat-raised-button color="accent">My Hotel</button>
-</mat-toolbar>
+
+
+
+</div>

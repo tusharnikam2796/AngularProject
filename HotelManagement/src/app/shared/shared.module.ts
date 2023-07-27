@@ -8,6 +8,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatRadioModule} from '@angular/material/radio';
 import { HttpClientModule } from '@angular/common/http';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
-    MatRadioModule
+    MatRadioModule,
+    MatCardModule
   ],
   exports: [
     FormsModule,
@@ -34,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
-    MatRadioModule
+    MatRadioModule,
+    MatCardModule
     
   ]
 })

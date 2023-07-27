@@ -12,4 +12,10 @@ commonUrl='http://localhost:3000/'
     let url=this.commonUrl + endpoint ;
     return this.httpClient.post(url,formData);
   }
+
+  getApiCall(endpoint:string){
+    let url=this.commonUrl+endpoint;
+    return this.httpClient.get(url);
+  }
+
 }

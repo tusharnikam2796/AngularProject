@@ -77,8 +77,55 @@
       "password": "hasgshygh",
       "confirmPassword": "sahahhghga",
       "id": 7
+    },
+    {
+      "fullName": "samir shinde",
+      "panNumber": "ASDGH1456D",
+      "username": "samir123",
+      "email": "samir123@gmail.com",
+      "contact": "8989787587",
+      "gender": "Male",
+      "password": "samir123",
+      "confirmPassword": "samir123",
+      "id": 8
+    },
+    {
+      "fullName": "omkar nikam",
+      "panNumber": "AGHJD1245G",
+      "username": "omkar123",
+      "email": "omkar123@gmail.com",
+      "contact": "8797987979",
+      "gender": "Male",
+      "password": "omkar123",
+      "confirmPassword": "omkar123",
+      "id": 9
     }
   ],
   "user": [],
-  "hotelDetails": []
+  "hotelDetails": [
+    {
+      "ownerName": "tushar nikam",
+      "ownerContact": "7350375919",
+      "hotelName": "New SkyBlue 5Star Hotel",
+      "hotelAddress": "satara",
+      "hotelContact": "8999055962",
+      "hotelMenu": "thali",
+      "roomsAvailable": "200",
+      "ownerCheck": "done",
+      "userPass": "789C",
+      "id": 1
+    },
+    {
+      "ownerName": "bhushan nikam",
+      "ownerContact": "8874424242",
+      "hotelName": "Swarajya Hotel",
+      "hotelAddress": "pune maharashtra",
+      "hotelContact": "7996444444",
+      "hotelMenu": "pure veg",
+      "roomsAvailable": "150",
+      "ownerCheck": "done",
+      "userPass": "456D",
+      "id": 2
+    }
+  ]
 }

@@ -1,18 +1,33 @@
 .ownersignUp-div{
     
 }
+.h2{
+    flex: 1 1 auto;
+   }
 .signupForm{
-    width: 450px;
-    height: 730px;
+    width: 800px;
+    height: 550px;
     text-align: center;
     margin: auto;
     border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(241, 232, 219);
 
     
 }
-.h2{
-    color: blueviolet;
+.mat-toolbar{
+    border-radius: 10px;
 }
 .form-field{
-    width: 80%;
+    width:300px;
+}
+.form-field1{
+    width: 600px;
+}
+.div-signup{
+    background-image: url('/assets/images/image5.jpg');
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
