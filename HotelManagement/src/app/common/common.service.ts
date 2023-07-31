@@ -6,6 +6,8 @@ import { Injectable } from '@angular/core';
 export class CommonService {
 
   journey!:any;
+  userName!:any;
+
   constructor() { }
 
   whiteSpaceValidator(name:any){

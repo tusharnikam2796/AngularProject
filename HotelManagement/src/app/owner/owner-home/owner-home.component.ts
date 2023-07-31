@@ -39,6 +39,9 @@ export class OwnerHomeComponent {
   login(){
     // this.router.navigateByUrl('/owner/ownerSucess')
     console.log(this.ownerLoginForm.value);
+    if (this.ownerLoginForm.value.username) {
+      this.commonService.userName=this.ownerLoginForm.value.username;
+    }
     
      this.getOwnerData();
      if(this.ownerData){

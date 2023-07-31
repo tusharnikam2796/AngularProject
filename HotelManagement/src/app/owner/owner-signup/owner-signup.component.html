@@ -27,7 +27,8 @@
                     2 characters required</mat-error>
                 <mat-error *ngIf="ownerSignupForm.get('fullName')?.errors?.['pattern']">only alphabates
                     accepted</mat-error>
-                    <mat-error *ngIf="ownerSignupForm.get('fullName')?.errors?.['whiteSpace']">space is not required</mat-error>
+                <mat-error *ngIf="ownerSignupForm.get('fullName')?.errors?.['whiteSpace']">space is not
+                    required</mat-error>
 
             </mat-form-field>&nbsp;
             <mat-form-field class="form-field">

@@ -60,7 +60,7 @@
         </mat-form-field>&nbsp;
         <mat-form-field class="form-field">
             <mat-label>Hotel Contact</mat-label>
-            <input type="tel" matInput matInput placeholder="555-555-1234" formControlName="hotelContact">
+            <input type="tel" matInput matInput placeholder="555-555-1234" formControlName="hotelContact" maxlength="10">
             <mat-icon matSuffix>mode_edit</mat-icon>
             <mat-hint *ngIf="!hotelRagistrationForm.get('hotelContact')?.touched">Enter hotel contact here</mat-hint>
             <mat-error *ngIf="hotelRagistrationForm.get('hotelContact')?.errors?.['required']">this field is
@@ -69,7 +69,7 @@
                 only</mat-error>
 
         </mat-form-field><br>
-        <mat-form-field class="form-field">
+        <!-- <mat-form-field class="form-field">
             <mat-label>Hotel Menu</mat-label>
             <input matInput formControlName="hotelMenu">
             <mat-hint *ngIf="!hotelRagistrationForm.get('hotelMenu')?.touched">Enter hotel menu here</mat-hint>
@@ -80,7 +80,20 @@
                 2 character are required </mat-error>
             <mat-error *ngIf="hotelRagistrationForm.get('hotelMenu')?.errors?.['pattern']">pattern is not
                 match</mat-error>
-        </mat-form-field>&nbsp;
+        </mat-form-field>&nbsp; -->
+        <mat-form-field class="form-field">
+            <mat-label>Hotel Menu</mat-label>
+            <input placeholder="Pick one" matInput formControlName="hotelMenu" [matAutocomplete]="auto">
+            <mat-autocomplete  #auto="matAutocomplete">
+              <mat-option value="Veg">Veg</mat-option>
+              <mat-option value="Non-Veg">Non-Veg</mat-option>
+              <mat-option value="Starters">Starters</mat-option>
+              <mat-option value="Snaks">Snaks</mat-option>
+            </mat-autocomplete>
+            <mat-hint *ngIf="!hotelRagistrationForm.get('hotelMenu')?.touched">Enter hotel menu here</mat-hint>
+            <mat-error *ngIf="hotelRagistrationForm.get('hotelMenu')?.errors?.['required']">this field is
+                required</mat-error>
+          </mat-form-field>&nbsp;
         <mat-form-field class="form-field">
             <mat-label>Rooms Available</mat-label>
             <input matInput formControlName="roomsAvailable">
@@ -99,10 +112,10 @@
 
         </mat-form-field>&nbsp;
         <mat-form-field class="form-field">
-            <mat-label>User Pass</mat-label>
-            <input matInput formControlName="userPass">
-            <mat-hint *ngIf="!hotelRagistrationForm.get('userPass')?.touched">Enter user pass here</mat-hint>
-            <mat-error *ngIf="hotelRagistrationForm.get('userPass')?.errors?.['required']">this field is
+            <mat-label>Owner Password</mat-label>
+            <input matInput formControlName="ownerPassword">
+            <mat-hint *ngIf="!hotelRagistrationForm.get('ownerPassword')?.touched">Enter user pass here</mat-hint>
+            <mat-error *ngIf="hotelRagistrationForm.get('ownerPassword')?.errors?.['required']">this field is
                 required</mat-error>
 
         </mat-form-field>

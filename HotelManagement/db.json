@@ -26,7 +26,7 @@
     {
       "fullName": "kumar shinde",
       "panNumber": "dfdfvfgcg",
-      "username": "kumar123",
+      "username": "kumar",
       "email": "aghgsahgh@gmail.com",
       "contact": "1224584125",
       "gender": "",
@@ -126,6 +126,78 @@
       "ownerCheck": "done",
       "userPass": "456D",
       "id": 2
+    },
+    {
+      "ownerName": "rakesh kumar",
+      "ownerContact": "7878979877",
+      "hotelName": "Taj hotel mumbai",
+      "hotelAddress": "mumbai",
+      "hotelContact": "7797979878",
+      "hotelMenu": "veg non veg",
+      "roomsAvailable": "1000",
+      "ownerCheck": "done",
+      "userPass": "789G",
+      "id": 3
+    },
+    {
+      "ownerName": "swapnil shinde",
+      "ownerContact": "8779789798",
+      "hotelName": "New Radhika Palace satara",
+      "hotelAddress": "satara",
+      "hotelContact": "78978987455",
+      "hotelMenu": "veg,non veg,staters",
+      "roomsAvailable": "180",
+      "ownerCheck": "done",
+      "userPass": "swapnil@123",
+      "id": 4
+    },
+    {
+      "ownerName": "tushar123",
+      "ownerContact": "8787998797",
+      "hotelName": "Royal palace kolhapur",
+      "hotelAddress": "kolhapur",
+      "hotelContact": "77979878979",
+      "hotelMenu": "veg",
+      "roomsAvailable": "140",
+      "ownerCheck": "donw",
+      "userPass": "gdvddff",
+      "id": 5
+    },
+    {
+      "ownerName": "kumar",
+      "ownerContact": "8787878797",
+      "hotelName": "Hotel Greenland",
+      "hotelAddress": "sangli",
+      "hotelContact": "8787878123",
+      "hotelMenu": "veg,non veg",
+      "roomsAvailable": "89",
+      "ownerCheck": "done",
+      "userPass": "gsgfdg",
+      "id": 6
+    },
+    {
+      "ownerName": "suraj xade",
+      "ownerContact": "8798797979",
+      "hotelName": "Hotel skylark satara",
+      "hotelAddress": "satara",
+      "hotelContact": "7896456466",
+      "hotelMenu": "nonveg",
+      "roomsAvailable": "60",
+      "ownerCheck": "done",
+      "ownerPassword": "suraj123",
+      "id": 7
+    },
+    {
+      "ownerName": "",
+      "ownerContact": "",
+      "hotelName": "",
+      "hotelAddress": "",
+      "hotelContact": "46545",
+      "hotelMenu": "",
+      "roomsAvailable": "",
+      "ownerCheck": "",
+      "ownerPassword": "",
+      "id": 8
     }
   ]
 }

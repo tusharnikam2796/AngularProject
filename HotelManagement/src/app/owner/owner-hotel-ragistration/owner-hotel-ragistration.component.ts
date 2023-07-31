@@ -24,10 +24,10 @@ export class OwnerHotelRagistrationComponent {
       hotelName:['',[Validators.required,Validators.minLength(5),Validators.pattern('[a-zA-z0-9/$@ ]*$')]],
       hotelAddress:['',[Validators.required,Validators.minLength(5),Validators.pattern('[a-zA-z0-9 ]*$')]],
       hotelContact:['',[Validators.required,Validators.pattern('[0-9]*$')]],
-      hotelMenu:['',[Validators.required,Validators.minLength(2)]],
+      hotelMenu:['',[Validators.required,]],
       roomsAvailable:['',[Validators.required,Validators.pattern('[0-9]*$')]],
       ownerCheck:['',[Validators.required,]],
-      userPass:['',[Validators.required,]],
+      ownerPassword:['',[Validators.required,]],
     })
   }
 
@@ -45,7 +45,7 @@ export class OwnerHotelRagistrationComponent {
       hotelMenu:this.hotelRagistrationForm.value.hotelMenu,
       roomsAvailable:this.hotelRagistrationForm.value.roomsAvailable,
       ownerCheck:this.hotelRagistrationForm.value.ownerCheck,
-      userPass:this.hotelRagistrationForm.value.userPass,
+      ownerPassword:this.hotelRagistrationForm.value.ownerPassword,
     }
     this.commonApiCallService.postApiCall(endpoint,request).subscribe(resp=>{
       console.log(resp);

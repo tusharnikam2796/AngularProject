@@ -9,6 +9,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatRadioModule} from '@angular/material/radio';
 import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 
 
@@ -25,7 +26,8 @@ import {MatCardModule} from '@angular/material/card';
     MatCheckboxModule,
     MatToolbarModule,
     MatRadioModule,
-    MatCardModule
+    MatCardModule,
+    MatAutocompleteModule
   ],
   exports: [
     FormsModule,
@@ -37,7 +39,8 @@ import {MatCardModule} from '@angular/material/card';
     MatCheckboxModule,
     MatToolbarModule,
     MatRadioModule,
-    MatCardModule
+    MatCardModule,
+    MatAutocompleteModule
     
   ]
 })
