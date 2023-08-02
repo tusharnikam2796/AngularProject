@@ -13,11 +13,11 @@
             <mat-toolbar color="accent" class="mat-toolbar">
                 <span><mat-icon> local_hotel</mat-icon> Admin Login....</span>
             </mat-toolbar><br>
-            <mat-form-field>
+            <mat-form-field class="mat-field">
                 <mat-label>AdminName</mat-label>
                 <input matInput formControlName="adminName">
             </mat-form-field><br>
-            <mat-form-field>
+            <mat-form-field class="mat-field">
                 <mat-label>Password</mat-label>
                 <input matInput formControlName="password" [type]="showPass? 'text' : 'password'">
                 <mat-icon matSuffix (click)="visiblepass()" *ngIf="!showPass">visibility</mat-icon>
@@ -25,7 +25,7 @@
 
             </mat-form-field><br>
             <button mat-raised-button color="primary" (click)="login()" class="login-button">login</button><br><br>
-            <a routerLink="">New Admin Ragistration..?</a>&nbsp;
+            <a routerLink="/admin/adminSignup">New Admin Ragistration..?</a>&nbsp;
 
         </form>
 

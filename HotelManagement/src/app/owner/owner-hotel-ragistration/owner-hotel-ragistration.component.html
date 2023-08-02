@@ -104,10 +104,13 @@
 
         </mat-form-field><br>
         <mat-form-field class="form-field">
-            <mat-label>Owner Check</mat-label>
-            <input matInput formControlName="ownerCheck">
-            <mat-hint *ngIf="!hotelRagistrationForm.get('ownerCheck')?.touched">Enter owner check here</mat-hint>
-            <mat-error *ngIf="hotelRagistrationForm.get('ownerCheck')?.errors?.['required']">this field is
+            <mat-label>Room Class</mat-label>
+            <input matInput formControlName="roomClass" [matAutocomplete]="auto">
+            <mat-autocomplete  #auto="matAutocomplete">
+                <mat-option value="AC-Room">AC Room</mat-option>
+              </mat-autocomplete>
+            <mat-hint *ngIf="!hotelRagistrationForm.get('roomClass')?.touched">Enter owner check here</mat-hint>
+            <mat-error *ngIf="hotelRagistrationForm.get('roomClass')?.errors?.['required']">this field is
                 required</mat-error>
 
         </mat-form-field>&nbsp;

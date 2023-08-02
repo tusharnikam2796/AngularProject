@@ -17,14 +17,22 @@
 
 <div *ngIf="hotelData">
     <table>
-        <tr>
+        <!-- <tr>
             <th *ngFor="let name of tableHeading">{{name}}</th>
+        </tr> -->
+        <tr>
+            <th>Hotel name</th>
+            <th>Hotel Address</th>
+            <th>Hotel Contact</th>
+            <th>Hotel Menu</th>
+            <th>Rooms Availability</th>
+            
         </tr>
         <tr *ngFor="let data of hotelData">
             <td>{{data.hotelName}}</td>
             <td>{{data.hotelAddress}}</td>
-            <td>{{data.ownerContact}}</td>
             <td>{{data.hotelContact}}</td>
+            <td>{{data.hotelMenu}}</td>
             <td>{{data.roomsAvailable}}</td>
         </tr>
     </table>

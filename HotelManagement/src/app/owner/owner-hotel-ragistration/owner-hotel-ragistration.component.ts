@@ -26,7 +26,7 @@ export class OwnerHotelRagistrationComponent {
       hotelContact:['',[Validators.required,Validators.pattern('[0-9]*$')]],
       hotelMenu:['',[Validators.required,]],
       roomsAvailable:['',[Validators.required,Validators.pattern('[0-9]*$')]],
-      ownerCheck:['',[Validators.required,]],
+      roomClass:['',[Validators.required,]],
       ownerPassword:['',[Validators.required,]],
     })
   }

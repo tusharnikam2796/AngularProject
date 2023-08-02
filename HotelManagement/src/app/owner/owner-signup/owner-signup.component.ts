@@ -52,7 +52,7 @@ export class OwnerSignupComponent {
   submit(){
     console.log(this.ownerSignupForm.value);
     let request={
-      fullName:this.ownerSignupForm.value.fullName?.split(" ").join(' '),
+      fullName:this.ownerSignupForm.value.fullName?.replace(/\s*/g," ").trim(),
       panNumber:this.ownerSignupForm.value.panNumber,
       username:this.ownerSignupForm.value.username,
       email:this.ownerSignupForm.value.email,

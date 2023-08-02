@@ -17,5 +17,9 @@ commonUrl='http://localhost:3000/'
     let url=this.commonUrl+endpoint;
     return this.httpClient.get(url);
   }
+  patchApiCall(endpoint:string,data:any,id:number){
+      let url=this.commonUrl+endpoint + '/' + id ;
+    return this.httpClient.patch(url,data);
+  }
 
 }

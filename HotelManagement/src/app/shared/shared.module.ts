@@ -10,6 +10,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -27,7 +28,8 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     MatToolbarModule,
     MatRadioModule,
     MatCardModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    ToastrModule.forRoot()
   ],
   exports: [
     FormsModule,
@@ -40,7 +42,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     MatToolbarModule,
     MatRadioModule,
     MatCardModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
     
   ]
 })

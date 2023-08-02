@@ -8,7 +8,7 @@
       "email": "tusharnikam2796@gmail.com",
       "contact": "7350375919",
       "gender": null,
-      "password": "tushar@2796",
+      "password": "Tushar@2796",
       "confirmPassword": "tushar@2796",
       "id": 1
     },
@@ -186,18 +186,6 @@
       "ownerCheck": "done",
       "ownerPassword": "suraj123",
       "id": 7
-    },
-    {
-      "ownerName": "",
-      "ownerContact": "",
-      "hotelName": "",
-      "hotelAddress": "",
-      "hotelContact": "46545",
-      "hotelMenu": "",
-      "roomsAvailable": "",
-      "ownerCheck": "",
-      "ownerPassword": "",
-      "id": 8
     }
   ]
 }
