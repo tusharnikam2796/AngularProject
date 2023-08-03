@@ -14,6 +14,7 @@ export class OwnerSucessComponent {
   hotelData: any;
   userName!: string;
   userHotelDetails: any[] = [];
+  showTable!:boolean;
 
   constructor(private router: Router, private commonApiCallService: CommonApiCallService,
     private commonService: CommonService) { }
@@ -26,13 +27,16 @@ export class OwnerSucessComponent {
     this.router.navigateByUrl('/owner/ownerHotelRagistration');
   }
 
-  hotelList() {
+ async hotelList() {
+  this.showTable=!this.showTable;
     let endpoint = 'hotelDetails';
-    this.commonApiCallService.getApiCall(endpoint).subscribe(resp => {
-      console.log(resp);
-      this.hotelData = resp;
+    // this.commonApiCallService.getApiCall(endpoint).subscribe(resp => {
+    //   console.log(resp);
+    //   this.hotelData = resp;
 
-    })
+    // })
+    this.hotelData=await this.commonApiCallService.getApiCall(endpoint).toPromise();
+    
     console.log('hotelData', this.hotelData);
     if (this.hotelData) {
       this.hotelDetailsByOwner();

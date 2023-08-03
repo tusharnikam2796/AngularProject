@@ -12,9 +12,9 @@
     <input matInput>
     <mat-icon matSuffix>search</mat-icon>
 </mat-form-field>&nbsp;
-<div *ngIf="hotelData" class="table-div">
+<div *ngIf="showTable" class="table-div">
    
-    <table>
+    <table *ngIf="userHotelDetails.length>0 && showTable">
         <!-- <tr>
             <th *ngFor="let name of tableHeading">{{name}}</th>
         </tr> -->
@@ -31,7 +31,7 @@
 
             
         </tr>
-        <tr *ngFor="let data of hotelData">
+        <tr *ngFor="let data of userHotelDetails">
             <td>{{data.hotelName}}</td>
             <td>{{data.hotelAddress}}</td>
             <td>{{data.hotelContact}}</td>
