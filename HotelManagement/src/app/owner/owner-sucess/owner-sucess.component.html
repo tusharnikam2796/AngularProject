@@ -7,15 +7,13 @@
     <button mat-raised-button color="accent" (click)="hotelRgistration()">Hotel ragistration</button>&nbsp;
     <button mat-raised-button color="accent" (click)="hotelList()">My Hotel lists</button>
 </mat-toolbar><br>
-
 <mat-form-field>
     <mat-label>Search Hotels</mat-label>
     <input matInput>
     <mat-icon matSuffix>search</mat-icon>
 </mat-form-field>&nbsp;
-
-
-<div *ngIf="hotelData">
+<div *ngIf="hotelData" class="table-div">
+   
     <table>
         <!-- <tr>
             <th *ngFor="let name of tableHeading">{{name}}</th>
@@ -26,6 +24,11 @@
             <th>Hotel Contact</th>
             <th>Hotel Menu</th>
             <th>Rooms Availability</th>
+            <th>Rooms Class</th>
+            <th>Edit</th>
+            <th>Delete</th>
+
+
             
         </tr>
         <tr *ngFor="let data of hotelData">
@@ -34,6 +37,9 @@
             <td>{{data.hotelContact}}</td>
             <td>{{data.hotelMenu}}</td>
             <td>{{data.roomsAvailable}}</td>
+            <td>{{data.roomClass}}</td>
+            <td><mat-icon matSuffix (click)="edit()">mode_edit</mat-icon></td>
+            <td><mat-icon>delete</mat-icon></td>
         </tr>
     </table>
 

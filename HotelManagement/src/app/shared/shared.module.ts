@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { ToastrModule } from 'ngx-toastr';
+import {MatTableModule} from '@angular/material/table';
 
 
 
@@ -29,7 +30,8 @@ import { ToastrModule } from 'ngx-toastr';
     MatRadioModule,
     MatCardModule,
     MatAutocompleteModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    MatTableModule
   ],
   exports: [
     FormsModule,
@@ -43,7 +45,7 @@ import { ToastrModule } from 'ngx-toastr';
     MatRadioModule,
     MatCardModule,
     MatAutocompleteModule,
-    
+    MatTableModule
   ]
 })
 export class SharedModule { }

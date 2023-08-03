@@ -111,7 +111,7 @@
       "hotelContact": "8999055962",
       "hotelMenu": "thali",
       "roomsAvailable": "200",
-      "ownerCheck": "done",
+      "roomClass": "done",
       "userPass": "789C",
       "id": 1
     },
@@ -123,7 +123,7 @@
       "hotelContact": "7996444444",
       "hotelMenu": "pure veg",
       "roomsAvailable": "150",
-      "ownerCheck": "done",
+      "roomClass": "done",
       "userPass": "456D",
       "id": 2
     },
@@ -135,7 +135,7 @@
       "hotelContact": "7797979878",
       "hotelMenu": "veg non veg",
       "roomsAvailable": "1000",
-      "ownerCheck": "done",
+      "roomClass": "done",
       "userPass": "789G",
       "id": 3
     },
@@ -147,7 +147,7 @@
       "hotelContact": "78978987455",
       "hotelMenu": "veg,non veg,staters",
       "roomsAvailable": "180",
-      "ownerCheck": "done",
+      "roomClass": "done",
       "userPass": "swapnil@123",
       "id": 4
     },
@@ -159,7 +159,7 @@
       "hotelContact": "77979878979",
       "hotelMenu": "veg",
       "roomsAvailable": "140",
-      "ownerCheck": "donw",
+      "roomClass": "donw",
       "userPass": "gdvddff",
       "id": 5
     },
@@ -171,7 +171,7 @@
       "hotelContact": "8787878123",
       "hotelMenu": "veg,non veg",
       "roomsAvailable": "89",
-      "ownerCheck": "done",
+      "roomClass": "done",
       "userPass": "gsgfdg",
       "id": 6
     },
@@ -183,9 +183,33 @@
       "hotelContact": "7896456466",
       "hotelMenu": "nonveg",
       "roomsAvailable": "60",
-      "ownerCheck": "done",
+      "roomClass": "done",
       "ownerPassword": "suraj123",
       "id": 7
+    },
+    {
+      "ownerName": "rohit shinde",
+      "ownerContact": "7779797879",
+      "hotelName": "hotel priti excutive ",
+      "hotelAddress": "satara",
+      "hotelContact": "9888977875",
+      "hotelMenu": "All",
+      "roomsAvailable": "400",
+      "roomClass": "done",
+      "ownerPassword": "rohit123",
+      "id": 8
+    },
+    {
+      "ownerName": "ranjeet ",
+      "ownerContact": "5454544444",
+      "hotelName": "lansScape hotel",
+      "hotelAddress": "mumbai",
+      "hotelContact": "7879797444",
+      "hotelMenu": "All",
+      "roomsAvailable": "100",
+      "roomClass": "done",
+      "ownerPassword": "ranjeet123",
+      "id": 9
     }
   ]
 }

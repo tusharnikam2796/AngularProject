@@ -47,4 +47,7 @@ export class OwnerSucessComponent {
     console.log('userHotelDetails', this.userHotelDetails);
 
   }
+  edit(){
+    this.router.navigateByUrl('owner/ownerHotelRagistration')
+  }
 }

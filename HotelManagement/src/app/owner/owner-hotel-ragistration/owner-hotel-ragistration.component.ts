@@ -44,7 +44,7 @@ export class OwnerHotelRagistrationComponent {
       hotelContact:this.hotelRagistrationForm.value.hotelContact,
       hotelMenu:this.hotelRagistrationForm.value.hotelMenu,
       roomsAvailable:this.hotelRagistrationForm.value.roomsAvailable,
-      ownerCheck:this.hotelRagistrationForm.value.ownerCheck,
+      roomClass:this.hotelRagistrationForm.value.roomClass,
       ownerPassword:this.hotelRagistrationForm.value.ownerPassword,
     }
     this.commonApiCallService.postApiCall(endpoint,request).subscribe(resp=>{
