@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { UserRoutingModule } from './user-routing.module';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { SharedModule } from '../shared/shared.module';
+import { UserSignupComponent } from './user-signup/user-signup.component';
 
 
 @NgModule({
   declarations: [
-    UserHomeComponent
+    UserHomeComponent,
+    UserSignupComponent
   ],
   imports: [
     CommonModule,

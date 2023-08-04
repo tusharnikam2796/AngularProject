@@ -1,0 +1,28 @@
+.div-home{
+    flex: 1 1;
+}
+.container{
+    background-image: url('/assets/images/image10.jpg');
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+.userSignupForm{
+    width: 800px;
+    height: 550px;
+    text-align: center;
+    margin: auto;
+    border: 0.5px solid black;
+    border-radius: 10px;
+    background-color: rgba(250, 245, 245, 0.7);
+}
+.form-field{
+    width:350px;
+}
+.form-field1{
+    width: 710px;
+}

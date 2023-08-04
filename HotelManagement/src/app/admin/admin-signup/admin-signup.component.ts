@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-signup',
@@ -9,7 +10,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class AdminSignupComponent {
   adminSignupForm!:FormGroup;
 
-  constructor(private formBuilder:FormBuilder){}
+  constructor(private formBuilder:FormBuilder, private router:Router){}
 
 ngOnInit(){
   this.myAdminSignupForm()
@@ -22,6 +23,11 @@ myAdminSignupForm(){
     
 
   })
+}
+
+
+back(){
+    this.router.navigateByUrl('admin/adminHome')
 }
 
 }

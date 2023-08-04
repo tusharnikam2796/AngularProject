@@ -1,0 +1,92 @@
+<div class="container">
+
+
+    <mat-toolbar color="primary">
+        <h2 class="h2"><mat-icon> local_hotel</mat-icon>&nbsp;GetSetBooking..</h2>
+        <div class="div-home">
+
+        </div>
+        <button mat-raised-button color="accent" (click)="back()">back</button>&nbsp;
+
+        <button routerLink="" mat-raised-button color="accent">My Hotel</button>
+    </mat-toolbar><br>
+
+
+    <div>
+        <form [formGroup]="userSignupForm" class="userSignupForm">
+            <mat-toolbar class="mat-toolbar" color="accent">
+                <span class="span-toolbar"><mat-icon> local_hotel</mat-icon> Owner Ragistration....</span>
+            </mat-toolbar><br>
+            <mat-form-field class="form-field">
+                <mat-label>UserName</mat-label>
+                <input matInput formControlName="userName">
+                <mat-hint *ngIf="!userSignupForm.get('userName')?.touched">Enter user name here</mat-hint>
+                <mat-error *ngIf="userSignupForm.get('userName')?.errors?.['required']">username is requird</mat-error>
+            </mat-form-field>&nbsp;
+
+            <mat-form-field class="form-field">
+                <mat-label>Contact</mat-label>
+                <input matInput formControlName="contact">
+                <mat-hint *ngIf="!userSignupForm.get('contact')?.touched">Enter Contact here</mat-hint>
+                <mat-error *ngIf="userSignupForm.get('contact')?.errors?.['required']">Contact is requird</mat-error>
+            </mat-form-field><br>
+
+            <mat-form-field class="form-field1">
+                <mat-label>Address</mat-label>
+                <input matInput formControlName="address">
+                <mat-hint *ngIf="!userSignupForm.get('address')?.touched">Enter Address here</mat-hint>
+                <mat-error *ngIf="userSignupForm.get('address')?.errors?.['required']">Address is requird</mat-error>
+            </mat-form-field><br>
+
+            <mat-form-field class="form-field">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email">
+                <mat-hint *ngIf="!userSignupForm.get('email')?.touched">Enter user name here</mat-hint>
+                <mat-error *ngIf="userSignupForm.get('email')?.errors?.['required']">Email is requird</mat-error>
+            </mat-form-field>&nbsp;
+
+            <mat-form-field class="form-field">
+                <mat-label>Adhar Number</mat-label>
+                <input matInput formControlName="adharNumber">
+                <mat-hint *ngIf="!userSignupForm.get('adharNumber')?.touched">Enter Email here</mat-hint>
+                <mat-error *ngIf="userSignupForm.get('adharNumber')?.errors?.['required']">Adhar Number is
+                    requird</mat-error>
+            </mat-form-field>&nbsp;<br>
+
+
+            <!-- <mat-form-field class="form-field">
+            <mat-label>Gender</mat-label>
+            <input matInput formControlName="gender">
+            <mat-hint *ngIf="!userSignupForm.get('gender')?.touched">Enter Gender here</mat-hint>
+            <mat-error *ngIf="userSignupForm.get('gender')?.errors?.['required']">Gender is requird</mat-error>
+        </mat-form-field><br> -->
+            <mat-radio-group formControlName="gender">
+                <mat-label>gender :</mat-label>
+                <mat-radio-button value="Male">Male</mat-radio-button>
+                <mat-radio-button value="Female">Female</mat-radio-button>
+                <mat-radio-button value="Other">Other</mat-radio-button><br>
+                <mat-error *ngIf="userSignupForm.get('gender')?.errors?.['required']">gender is required</mat-error>
+            </mat-radio-group><br>
+
+            <mat-form-field class="form-field">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password">
+                <mat-hint *ngIf="!userSignupForm.get('password')?.touched">Enter Password here</mat-hint>
+                <mat-error *ngIf="userSignupForm.get('password')?.errors?.['required']">Password is requird</mat-error>
+            </mat-form-field>&nbsp;
+
+            <mat-form-field class="form-field">
+                <mat-label>Confirm Password</mat-label>
+                <input matInput formControlName="confirmPassword">
+                <mat-hint *ngIf="!userSignupForm.get('confirmPassword')?.touched">Enter Confirm Password here</mat-hint>
+                <mat-error *ngIf="userSignupForm.get('confirmPassword')?.errors?.['required']">Confirm Password is
+                    requird</mat-error>
+            </mat-form-field><br><br>
+            <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+
+
+        </form>
+    </div>
+
+
+</div>

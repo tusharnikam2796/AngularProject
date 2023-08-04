@@ -6,6 +6,7 @@ import { AdminSignupComponent } from './admin-signup/admin-signup.component';
 
 const routes: Routes = [
  {path:'',component:AdminHomeComponent},
+ {path:'adminHome',component:AdminHomeComponent},
  {path:'adminSignup',component:AdminSignupComponent}
 ];
 

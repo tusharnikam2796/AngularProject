@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-home',
@@ -11,7 +12,7 @@ export class AdminHomeComponent {
   adminLoginForm!:FormGroup;
   showPass!: boolean;
 
-  constructor(private formBulider:FormBuilder){}
+  constructor(private formBulider:FormBuilder,private router:Router){}
 
   ngOnInit(){
     this.myAdminForm()
@@ -28,6 +29,9 @@ export class AdminHomeComponent {
   }
   visiblepass(){
     this.showPass= !this.showPass
+  }
+  back(){
+     this.router.navigateByUrl('')
   }
 
 }

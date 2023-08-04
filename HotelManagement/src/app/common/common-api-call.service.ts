@@ -21,7 +21,7 @@ commonUrl='http://localhost:3000/'
       let url=this.commonUrl+endpoint + '/' + id ;
     return this.httpClient.patch(url,data);
   }
-  deleteApiCall(id:any,endpoint:string){
+  deleteApiCall(endpoint:string,id:number){
     let url=this.commonUrl+endpoint+'/'+id;
     return this.httpClient.delete(url);
   }

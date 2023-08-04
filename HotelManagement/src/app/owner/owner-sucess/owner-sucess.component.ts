@@ -40,9 +40,17 @@ export class OwnerSucessComponent {
     console.log('hotelData', this.hotelData);
     if (this.hotelData) {
       this.hotelDetailsByOwner();
+      if(this.userHotelDetails.length>0){
+
+      }else{
+        this.commonService.warningToster('warning','no any hotel available');
+      }
+    }else{
+      alert('no owner data available')
     }
   }
   hotelDetailsByOwner() {
+    this.userHotelDetails=[]
     this.hotelData.forEach((element: any) => {
       if (element.ownerName === this.userName) {
         this.userHotelDetails.push(element);
@@ -53,5 +61,11 @@ export class OwnerSucessComponent {
   }
   edit(){
     this.router.navigateByUrl('owner/ownerHotelRagistration')
+  }
+  async delete(id:number){
+    let endpoint='hotelDetails'
+      await this.commonApiCallService.deleteApiCall(endpoint,id).toPromise();
+      this.showTable=!this.showTable;
+      this.hotelList() ;
   }
 }

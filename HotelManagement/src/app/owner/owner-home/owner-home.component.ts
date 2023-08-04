@@ -73,7 +73,7 @@ export class OwnerHomeComponent {
         this.router.navigateByUrl('/owner/ownerSucess')
       } else {
         // alert('username or password is incorrect')
-        this.commonService.warningToster('error','incorrect password');
+        this.commonService.errorToster('error','incorrect password');
         this.commonService.forgetPass = true;
         this.router.navigateByUrl('/owner/ownerHome')
       }

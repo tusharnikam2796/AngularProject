@@ -3,7 +3,7 @@
     <div class="div-toolbar">
 
     </div>
-    <button mat-raised-button color="accent">back</button>&nbsp;
+    <button mat-raised-button color="accent" (click)="back()">back</button>&nbsp;
 
     <button routerLink="" mat-raised-button color="accent">My Hotel</button>
 </mat-toolbar><br>
@@ -14,6 +14,10 @@
         <mat-form-field>
             <mat-label>Admin Name</mat-label>
             <input matInput formControlName="adminName">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Admin Contact</mat-label>
+            <input matInput formControlName="adminContact">
         </mat-form-field>
 
     </form>

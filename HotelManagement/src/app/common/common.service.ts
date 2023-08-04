@@ -20,7 +20,10 @@ export class CommonService {
 
   }
 
-  warningToster(title:any,msg:any){
+  errorToster(title:any,msg:any){
     return this.toastrService.error(title,msg);
+  }
+  warningToster(title:any,msg:any){
+return this.toastrService.warning(title,msg);
   }
 }
