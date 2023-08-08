@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+    <h2 class="h2"><mat-icon> local_hotel</mat-icon>&nbsp;GetSetBooking..</h2>
+    <div class="div-home">
+
+    </div>
+    <button mat-raised-button color="accent" (click)="back()">back</button>&nbsp;
+
+    <button mat-raised-button color="accent" (click)="hotelList()">Hotel list</button>
+</mat-toolbar><br>
+
+
+<div *ngIf="showTable">
+    <table>
+       <tr>
+        <th>Hotel name</th>
+        <th>Hotel Address</th>
+        <th>Hotel Contact</th>
+        <th>Hotel Menu</th>
+        <th>Rooms Availability</th>
+        <th>Rooms Class</th>
+        <th>Delete</th>
+       </tr>
+       <tr *ngFor="let data of hotelDataList ">
+        <td>{{data.hotelName}}</td>
+        <td>{{data.hotelAddress}}</td>
+        <td>{{data.hotelContact}}</td>
+        <td>{{data.hotelMenu}}</td>
+        <td>{{data.roomsAvailable}}</td>
+        <td>{{data.roomClass}}</td>
+        <td><mat-icon (click)="delete(data.id)">delete</mat-icon></td> 
+       </tr>
+    </table>
+</div>

@@ -38,7 +38,7 @@
             <td>{{data.hotelMenu}}</td>
             <td>{{data.roomsAvailable}}</td>
             <td>{{data.roomClass}}</td>
-            <td><mat-icon matSuffix (click)="edit()">mode_edit</mat-icon></td>
+            <td><mat-icon matSuffix (click)="edit(data.id)">mode_edit</mat-icon></td>
             <td><mat-icon (click)="delete(data.id)">delete</mat-icon></td>
         </tr>
     </table>

@@ -9,6 +9,8 @@ export class CommonService {
   journey!:any;
   userName!:any;
   forgetPass!:boolean;
+  id: any;
+  dataById: any;
 
   constructor(private toastrService:ToastrService) { }
 

@@ -124,7 +124,7 @@
       "hotelMenu": "thali",
       "roomsAvailable": "200",
       "roomClass": "done",
-      "userPass": "789C",
+      "ownerPassword": "789C",
       "id": 1
     },
     {
@@ -136,7 +136,7 @@
       "hotelMenu": "pure veg",
       "roomsAvailable": "150",
       "roomClass": "done",
-      "userPass": "456D",
+      "ownerPassword": "456D",
       "id": 2
     },
     {
@@ -148,7 +148,7 @@
       "hotelMenu": "veg non veg",
       "roomsAvailable": "1000",
       "roomClass": "done",
-      "userPass": "789G",
+      "ownerPassword": "789G",
       "id": 3
     },
     {
@@ -160,7 +160,7 @@
       "hotelMenu": "veg,non veg,staters",
       "roomsAvailable": "180",
       "roomClass": "done",
-      "userPass": "swapnil@123",
+      "ownerPassword": "swapnil@123",
       "id": 4
     },
     {
@@ -168,11 +168,11 @@
       "ownerContact": "8787998797",
       "hotelName": "Royal palace kolhapur",
       "hotelAddress": "kolhapur",
-      "hotelContact": "77979878979",
+      "hotelContact": "7894665166",
       "hotelMenu": "veg",
-      "roomsAvailable": "140",
-      "roomClass": "donw",
-      "userPass": "gdvddff",
+      "roomsAvailable": "200",
+      "roomClass": "AC-Rooms",
+      "ownerPassword": "Tushar@2796",
       "id": 5
     },
     {
@@ -184,7 +184,7 @@
       "hotelMenu": "veg,non veg",
       "roomsAvailable": "89",
       "roomClass": "done",
-      "userPass": "gsgfdg",
+      "ownerPassword": "gsgfdg",
       "id": 6
     },
     {
@@ -222,6 +222,18 @@
       "roomClass": "done",
       "ownerPassword": "ranjeet123",
       "id": 9
+    },
+    {
+      "ownerName": "tushar123",
+      "ownerContact": "8787998797",
+      "hotelName": "london palace",
+      "hotelAddress": "mumbai",
+      "hotelContact": "tushar123",
+      "hotelMenu": "veg",
+      "roomsAvailable": "140",
+      "roomClass": "Non-AC",
+      "ownerPassword": "Tushar@2796",
+      "id": 10
     }
   ]
 }

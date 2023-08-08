@@ -13,8 +13,8 @@ commonUrl='http://localhost:3000/'
     return this.httpClient.post(url,formData);
   }
 
-  getApiCall(endpoint:string){
-    let url=this.commonUrl+endpoint;
+  getApiCall(endpoint:string,id?:number){
+    let url= id? this.commonUrl+endpoint+'/'+ id : this.commonUrl+endpoint;
     return this.httpClient.get(url);
   }
   patchApiCall(endpoint:string,data:any,id:number){
