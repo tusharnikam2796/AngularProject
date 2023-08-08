@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { CommonApiCallService } from 'src/app/common/common-api-call.service';
 import { CommonService } from 'src/app/common/common.service';
+import { OwnerDialogComponent } from '../owner-dialog/owner-dialog.component';
 
 @Component({
   selector: 'app-owner-sucess',
@@ -18,7 +20,7 @@ export class OwnerSucessComponent {
   dataById: any;
 
   constructor(private router: Router, private commonApiCallService: CommonApiCallService,
-    private commonService: CommonService) { }
+    private commonService: CommonService ,public dialog: MatDialog) { }
 
   ngOnInit() {
     console.log('onInit calling..');
@@ -71,9 +73,24 @@ export class OwnerSucessComponent {
 
   }
   async delete(id:number){
-    let endpoint='hotelDetails'
-      await this.commonApiCallService.deleteApiCall(endpoint,id).toPromise();
-      this.showTable=!this.showTable;
-      this.hotelList() ;
+    const dialogRef=this.dialog.open(OwnerDialogComponent, {
+      width: '250px',
+      height:'250px'
+    })
+    dialogRef.afterClosed().subscribe((yesValue:any)=>{
+      if(yesValue === 'YES'){
+        this.deleteRecord(id);
+        this.showTable = !this.showTable,
+        this.hotelList() ;
+      } 
+    });
   }
+
+    async deleteRecord(id:number){
+      let endpoint='hotelDetails'
+      await this.commonApiCallService.deleteApiCall(endpoint,id).toPromise();
+    
+    }
+    
+ 
 }

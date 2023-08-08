@@ -7,6 +7,8 @@ import { OwnerSignupComponent } from './owner-signup/owner-signup.component';
 import { SharedModule } from '../shared/shared.module';
 import { OwnerSucessComponent } from './owner-sucess/owner-sucess.component';
 import { OwnerHotelRagistrationComponent } from './owner-hotel-ragistration/owner-hotel-ragistration.component';
+import { OwnerDialogComponent } from './owner-dialog/owner-dialog.component';
+
 
 
 
@@ -16,6 +18,8 @@ import { OwnerHotelRagistrationComponent } from './owner-hotel-ragistration/owne
     OwnerSignupComponent,
     OwnerSucessComponent,
     OwnerHotelRagistrationComponent,
+    OwnerDialogComponent,
+    
    
   ],
   imports: [
