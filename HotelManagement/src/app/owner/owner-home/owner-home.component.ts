@@ -70,6 +70,7 @@ export class OwnerHomeComponent {
 
       })
       if (this.isValid) {
+        this.commonService.sucessToster('sucess','Sucessfully Login')
         this.router.navigateByUrl('/owner/ownerSucess')
       } else {
         // alert('username or password is incorrect')

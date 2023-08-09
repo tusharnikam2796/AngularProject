@@ -12,17 +12,23 @@ import { CommonService } from 'src/app/common/common.service';
 export class AdminHomeComponent {
 
   adminLoginForm!: FormGroup;
+  adminForgetPasswordForm!:FormGroup;
   showPass!: boolean;
-  getJourney: any;
+  endpoint: any;
   adminData: any;
   validAdmindata!: boolean;
+  showForgetPasswordForm:boolean=false;
+  forgetPass: boolean=false;
+  adminName: any;
 
   constructor(private formBulider: FormBuilder, private router: Router, private commonService: CommonService, private commonApiCallService: CommonApiCallService) { }
 
   ngOnInit() {
     this.myAdminForm();
-    this.getJourney = this.commonService.journey;
+    this.endpoint = this.commonService.journey;
     this.getAdmindata();
+    this.adminName=this.commonService.adminName;
+    this.forgetPass = this.commonService.forgetPass;
   }
 
   myAdminForm() {
@@ -32,8 +38,21 @@ export class AdminHomeComponent {
     })
   }
 
+  adminForgetForm(){
+    this.adminForgetPasswordForm=this.formBulider.group({
+      newPassword: ['', []],
+      confirmPassword: ['', []],
+      reConfirmPassword: ['', []],
+    })
+  }
+
 
   login() {
+    if (this.adminLoginForm.value.adminName) {
+      this.commonService.adminName = this.adminLoginForm.value.adminName;
+    }
+
+
     if (this.adminData) {
       this.adminData.find((element:any)=>{
         if (element.adminName===this.adminLoginForm.value.adminName && element.password===this.adminLoginForm.value.password) {
@@ -44,7 +63,9 @@ export class AdminHomeComponent {
         this.router.navigateByUrl('admin/adminSucess');
       }else{
         alert('password is wrong');
+        this.commonService.forgetPass=true;
         this.router.navigateByUrl('admin/adminHome')
+        
       }
     }
 
@@ -56,8 +77,38 @@ export class AdminHomeComponent {
     this.router.navigateByUrl('')
   }
   async getAdmindata() {
-    this.adminData = await this.commonApiCallService.getApiCall(this.getJourney).toPromise();
+    this.adminData = await this.commonApiCallService.getApiCall(this.endpoint).toPromise();
     console.log('this.adminData', this.adminData);
+
+  }
+
+  forgetPassword(){
+    this.showForgetPasswordForm=!this.showForgetPasswordForm;
+    this.adminForgetForm();
+
+  }
+  submit(){
+     this.updateForm();
+     this.showForgetPasswordForm=!this.showForgetPasswordForm;
+     this.forgetPass = false;
+  }
+  async updateForm(){
+     var admin:any;
+    this.adminData.find((element:any)=>{
+      if(element.adminName==this.adminName){
+         admin=element
+      }
+     })
+     if(admin){
+       let request={
+        password:this.adminForgetPasswordForm.value.newPassword
+       }
+        await this.commonApiCallService.patchApiCall(this.endpoint,request,admin.id).toPromise()
+
+     }else{
+      this.commonService.warningToster('warning','user does not exist');
+     }
+    
 
   }
 

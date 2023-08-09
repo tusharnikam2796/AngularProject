@@ -6,26 +6,30 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class CommonService {
 
-  journey!:any;
-  userName!:any;
-  forgetPass!:boolean;
+  journey!: any;
+  userName!: any;
+  forgetPass!: boolean;
   id: any;
   dataById: any;
+  adminName: any;
 
-  constructor(private toastrService:ToastrService) { }
+  constructor(private toastrService: ToastrService) { }
 
-  whiteSpaceValidator(name:any){
+  whiteSpaceValidator(name: any) {
     let data = name.value;
-    let newData=data?.trim();
-    let valid=data.length != newData.length;
-    return valid? {whiteSpace:true} : null
+    let newData = data?.trim();
+    let valid = data.length != newData.length;
+    return valid ? { whiteSpace: true } : null
 
   }
 
-  errorToster(title:any,msg:any){
-    return this.toastrService.error(title,msg);
+  errorToster(title: any, msg: any) {
+    return this.toastrService.error(title, msg);
   }
-  warningToster(title:any,msg:any){
-return this.toastrService.warning(title,msg);
+  warningToster(title: any, msg: any) {
+    return this.toastrService.warning(title, msg);
+  }
+  sucessToster(title: any, msg: any) {
+    return this.toastrService.success(title, msg);
   }
 }

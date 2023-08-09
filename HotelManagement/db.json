@@ -1,5 +1,17 @@
 {
-  "admin": [],
+  "admin": [
+    {
+      "adminName": "tushar",
+      "contact": "7898897982",
+      "address": "satara",
+      "email": "tushar@gmail.com",
+      "adharNumber": "78797987979778",
+      "gender": "Male",
+      "password": "Tushar@2796",
+      "confirmPassword": "tushar123",
+      "id": 1
+    }
+  ],
   "owner": [
     {
       "fullName": "tushar nikam",

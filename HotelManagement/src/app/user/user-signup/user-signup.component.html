@@ -41,6 +41,7 @@
             <mat-form-field class="form-field">
                 <mat-label>Email</mat-label>
                 <input matInput formControlName="email">
+                <mat-icon matSuffix>email</mat-icon>
                 <mat-hint *ngIf="!userSignupForm.get('email')?.touched">Enter user name here</mat-hint>
                 <mat-error *ngIf="userSignupForm.get('email')?.errors?.['required']">Email is requird</mat-error>
             </mat-form-field>&nbsp;

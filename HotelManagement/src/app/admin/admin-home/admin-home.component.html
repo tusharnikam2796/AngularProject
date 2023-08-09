@@ -1,4 +1,4 @@
-<div>
+<div class="container">
     <mat-toolbar color="primary">
         <h2 class="h2"><mat-icon> local_hotel</mat-icon>&nbsp;GetSetBooking..</h2>
         <div class="div-home">
@@ -6,16 +6,17 @@
         </div>
         <button mat-raised-button color="accent" (click)="back()">back</button>&nbsp;
 
-        <button routerLink="" mat-raised-button color="accent">My Hotel</button>
+        <button routerLink="" mat-raised-button color="accent"><mat-icon>home</mat-icon>home</button>
     </mat-toolbar><br>
     <div class="div-form">
-        <form [formGroup]="adminLoginForm" class="adminlogin">
+        <form [formGroup]="adminLoginForm" class="adminlogin" *ngIf="!showForgetPasswordForm">
             <mat-toolbar color="accent" class="mat-toolbar">
                 <span><mat-icon> local_hotel</mat-icon> Admin Login....</span>
             </mat-toolbar><br>
             <mat-form-field class="mat-field">
                 <mat-label>AdminName</mat-label>
                 <input matInput formControlName="adminName">
+                <mat-icon matSuffix>account_circle</mat-icon>
             </mat-form-field><br>
             <mat-form-field class="mat-field">
                 <mat-label>Password</mat-label>
@@ -25,10 +26,32 @@
 
             </mat-form-field><br>
             <button mat-raised-button color="primary" (click)="login()" class="login-button">login</button><br><br>
+            <button mat-raised-button color="primary" (click)="forgetPassword()" *ngIf="forgetPass">Forget password..</button><br><br>
             <a routerLink="/admin/adminSignup">New Admin Ragistration..?</a>&nbsp;
 
         </form>
 
+    </div>
+
+    <div>
+        <form [formGroup]="adminForgetPasswordForm" class="forgetForm" *ngIf="showForgetPasswordForm">
+            <mat-toolbar color="accent" class="mat-toolbar">
+                <span><mat-icon> local_hotel</mat-icon> Forget Password....</span>
+            </mat-toolbar><br>
+            <mat-form-field>
+                <mat-label>New Password</mat-label>
+                <input matInput formControlName="newPassword">
+            </mat-form-field><br>
+            <mat-form-field>
+                <mat-label>Confirm Password</mat-label>
+                <input matInput formControlName="confirmPassword">
+            </mat-form-field><br>
+             <mat-form-field>
+                <mat-label>ReconFirm Password</mat-label>
+                <input matInput formControlName="reConfirmPassword">
+            </mat-form-field><br>
+            <button mat-raised-button color="primary" (click)="submit()">submit</button>
+        </form>
     </div>
 
 

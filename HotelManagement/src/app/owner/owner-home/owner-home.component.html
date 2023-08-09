@@ -7,7 +7,7 @@
         </div>
         <button mat-raised-button color="accent" (click)="back()">back</button>&nbsp;
 
-        <button routerLink="" mat-raised-button color="accent">My Hotel</button>
+        <button routerLink="" mat-raised-button color="accent"><mat-icon>home</mat-icon>home</button>
     </mat-toolbar><br>
     <div class="div-form">
         <form [formGroup]="ownerLoginForm" class="ownerLogin-div" *ngIf="!showForgetPasswordForm">
@@ -22,6 +22,7 @@
             <mat-form-field class="login-formField">
                 <mat-label>UserName</mat-label>
                 <input matInput formControlName="username" (keyup)="userInput()">
+                <mat-icon matSuffix>account_circle</mat-icon>
                 <mat-hint *ngIf="!ownerLoginForm.get('username')?.touched">Enter UserName Here</mat-hint>
                 <mat-error *ngIf="ownerLoginForm.get('username')?.errors?.['required']">UserName is required</mat-error>
                 <mat-error *ngIf="ownerLoginForm.get('username')?.errors?.['pattern']">pattern is not match</mat-error>
