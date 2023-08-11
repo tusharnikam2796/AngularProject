@@ -8,13 +8,12 @@ import { UserSignupComponent } from './user-signup/user-signup.component';
 import { UserSucessComponent } from './user-sucess/user-sucess.component';
 import { BookNowComponent } from './book-now/book-now.component';
 
-
 @NgModule({
   declarations: [
     UserHomeComponent,
     UserSignupComponent,
     UserSucessComponent,
-    BookNowComponent
+    BookNowComponent,
   ],
   imports: [
     CommonModule,

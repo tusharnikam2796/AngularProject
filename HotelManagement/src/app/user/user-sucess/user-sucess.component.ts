@@ -10,6 +10,8 @@ import { CommonService } from 'src/app/common/common.service';
 })
 export class UserSucessComponent {
   hotelData:any;
+  searchBoxValue:any;
+
 
 
 

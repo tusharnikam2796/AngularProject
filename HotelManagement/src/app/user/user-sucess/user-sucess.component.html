@@ -7,10 +7,14 @@
     <button mat-raised-button color="accent" (click)="viewHotels()"><mat-icon>list</mat-icon>View Hotels</button>&nbsp;
     <button routerLink="" mat-raised-button color="accent"><mat-icon>home</mat-icon>home</button>
 </mat-toolbar><br>
-
+<mat-form-field>
+  <mat-label>Search Hotels</mat-label>
+  <input matInput [(ngModel)]="searchBoxValue">
+  <mat-icon matSuffix>search</mat-icon>
+</mat-form-field>&nbsp;
 
 <div>
-    <mat-card *ngFor="let hotel of hotelData" class="mat-card">
+    <mat-card class="mat-card" *ngFor="let hotel of hotelData">
         <mat-card-header>
           <mat-card-title>{{ hotel.hotelName }}</mat-card-title>
           <!-- <img class="img-mat" mat-card-lg-image src="/assets/images/image4.jpg"  > -->
