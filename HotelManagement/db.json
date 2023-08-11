@@ -10,6 +10,17 @@
       "password": "Tushar@2796",
       "confirmPassword": "tushar123",
       "id": 1
+    },
+    {
+      "adminName": "",
+      "contact": "",
+      "address": "",
+      "email": "",
+      "adharNumber": "",
+      "gender": "",
+      "password": "",
+      "confirmPassword": "",
+      "id": 2
     }
   ],
   "owner": [
@@ -182,7 +193,7 @@
       "hotelAddress": "kolhapur",
       "hotelContact": "7894665166",
       "hotelMenu": "veg",
-      "roomsAvailable": "200",
+      "roomsAvailable": "150",
       "roomClass": "AC-Rooms",
       "ownerPassword": "Tushar@2796",
       "id": 5
@@ -246,6 +257,18 @@
       "roomClass": "Non-AC",
       "ownerPassword": "Tushar@2796",
       "id": 10
+    }
+  ],
+  "hotelBooking": [
+    {
+      "fullName": "tushar nikam",
+      "contact": "7350375919",
+      "email": "tusharnikam2796@gmail.com",
+      "adharNumber": "276030406332",
+      "roomClass": "AC-Rooms",
+      "paymentMethod": "UPI",
+      "amount": "5000",
+      "id": 1
     }
   ]
 }

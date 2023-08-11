@@ -1,0 +1,29 @@
+.div-home{
+    flex: 1 1;
+}
+.bookNow-form{
+    width: 600px;
+    height: 450px;
+    text-align: center;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    border-radius: 10px;
+    background-color: rgba(250, 245, 245, 0.5); 
+}
+.form-field{
+    width: 250px;
+}
+.form-field1{
+    width:500px;
+}
+.container{
+    background-image: url('/assets/images/image3.jpg');
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.mat-toolbar{
+    border-radius: 10px;
+}

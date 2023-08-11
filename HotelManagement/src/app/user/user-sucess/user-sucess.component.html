@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+    <h2 class="h2"><mat-icon> local_hotel</mat-icon>&nbsp;GetSetBooking..</h2>
+    <div class="div-home">
+
+    </div>
+    <button mat-raised-button color="accent" (click)="back()">back</button>&nbsp;
+    <button mat-raised-button color="accent" (click)="viewHotels()"><mat-icon>list</mat-icon>View Hotels</button>&nbsp;
+    <button routerLink="" mat-raised-button color="accent"><mat-icon>home</mat-icon>home</button>
+</mat-toolbar><br>
+
+
+<div>
+    <mat-card *ngFor="let hotel of hotelData" class="mat-card">
+        <mat-card-header>
+          <mat-card-title>{{ hotel.hotelName }}</mat-card-title>
+          <!-- <img class="img-mat" mat-card-lg-image src="/assets/images/image4.jpg"  > -->
+
+        </mat-card-header>
+        <mat-card-content>
+          <p>Address: {{ hotel.hotelAddress }}</p>
+          <p>Hotel Contact: {{ hotel. hotelContact }}</p>
+          <p>Rooms Available: {{ hotel.roomsAvailable }}</p>
+          <p>Room Class: {{ hotel.roomClass }}</p>
+          <!-- Additional hotel details -->
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button mat-raised-button color="warn" (click)="bookNow()">BookNow..</button>
+          </mat-card-actions>
+      </mat-card>
+</div>

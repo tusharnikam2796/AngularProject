@@ -38,7 +38,7 @@ export class UserHomeComponent {
           }
         })
         if(this.validUser){
-            this.router.navigateByUrl('');
+            this.router.navigateByUrl('user/userSucess');
         }else{
             alert('password is wrong');
             this.router.navigateByUrl('user/userHome');
