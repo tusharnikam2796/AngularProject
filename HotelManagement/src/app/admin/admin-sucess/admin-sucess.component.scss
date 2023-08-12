@@ -2,9 +2,29 @@
     flex: 1 1;
 }
 .table,tr,td,th{
-    border: 2px solid rgb(11, 10, 10);
+    // border: 2px solid rgb(11, 10, 10);
     // border-collapse: collapse;
-    padding: 4px 4px;
+    // padding: 4px 4px;
+    // text-align: center;
+    padding: 8px 10px;
     text-align: center;
+    border-bottom: 1px solid #ddd;
     background-color: rgba(250, 245, 245, 0.5);
+}
+th{
+    background-color: rgba(244, 176, 176, 0.5);
+}
+.container{
+    background-image: url('/assets/images/image15.jpg');
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.div-table{
+    margin-left: 250px;
+}
+.seachBox{
+    margin-left: 40%;
 }

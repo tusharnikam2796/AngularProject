@@ -12,12 +12,13 @@ import { CommonService } from 'src/app/common/common.service';
 export class AdminSucessComponent {
   hotelDataList: any;
   showTable!:boolean;
+  searchBoxValue:any;
 
 
 constructor(private formBuilder:FormBuilder, private router:Router,private commonService:CommonService, private commonApiCallService:CommonApiCallService ){}
 
   back(){
-
+      this.router.navigateByUrl('admin/adminHome');
   }
  async hotelList(){
     let endpoint='hotelDetails'

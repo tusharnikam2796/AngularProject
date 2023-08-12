@@ -31,7 +31,7 @@ myBookNowForm(){
 }
 
 back(){
-
+  this.router.navigateByUrl('user/userSucess');
 }
 submitDetails(){
  let endpoint='hotelBooking';

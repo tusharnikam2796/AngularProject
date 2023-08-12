@@ -2,17 +2,21 @@
     flex: 1 1;
 }
 table,tr,td,th{
-    border: 2px solid rgb(11, 10, 10);
-    // border-collapse: collapse;
-    padding: 4px 4px;
+    // border: 2px solid rgb(11, 10, 10);
+    // // border-collapse: collapse;
+    // padding: 4px 4px;
+    // text-align: center;
+    // background-color: rgba(250, 245, 245, 0.5);
+    padding: 8px 10px;
     text-align: center;
+    border-bottom: 1px solid #ddd;
     background-color: rgba(250, 245, 245, 0.5);
 }
 th{
-    background-color: rgba(250, 245, 245, 0.5);
+    background-color: rgba(244, 176, 176, 0.5);
 }
 .container{
-    background-image: url('/assets/images/image7.jpg');
+    background-image: url('/assets/images/image12.jpg');
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,4 +25,10 @@ th{
     text-align: center;
     position: relative;
     left: 250px;
+}
+.seachBox{
+    margin-left: 40%;
+}
+::ng-deep mat-dialog-container.mat-mdc-dialog-container.mdc-dialog .cdk-dialog-container .mdc-dialog__container .mat-mdc-dialog-surface.mdc-dialog__surface{
+    background-color: aqua;
 }

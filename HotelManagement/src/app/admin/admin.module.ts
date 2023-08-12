@@ -6,16 +6,16 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { SharedModule } from '../shared/shared.module';
 import { AdminSignupComponent } from './admin-signup/admin-signup.component';
 import { AdminSucessComponent } from './admin-sucess/admin-sucess.component';
+import { AdminFilterPipe } from './admin-filter.pipe';
 
 
 
 @NgModule({
   declarations: [
-    
-  
     AdminHomeComponent,
-            AdminSignupComponent,
-            AdminSucessComponent
+    AdminSignupComponent,
+    AdminSucessComponent,
+    AdminFilterPipe
   ],
   imports: [
     CommonModule,

@@ -35,7 +35,7 @@ export class UserSucessComponent {
 
 
   back() {
-
+      this.router.navigateByUrl('user/userHome');
   }
 
 }

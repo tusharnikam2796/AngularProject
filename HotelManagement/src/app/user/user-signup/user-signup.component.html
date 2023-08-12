@@ -8,7 +8,7 @@
         </div>
         <button mat-raised-button color="accent" (click)="back()">back</button>&nbsp;
 
-        <button routerLink="" mat-raised-button color="accent">My Hotel</button>
+        <button routerLink="" mat-raised-button color="accent"><mat-icon>home</mat-icon>home</button>
     </mat-toolbar><br>
 
 
@@ -66,7 +66,7 @@
                 <mat-radio-button value="Male">Male</mat-radio-button>
                 <mat-radio-button value="Female">Female</mat-radio-button>
                 <mat-radio-button value="Other">Other</mat-radio-button><br>
-                <mat-error *ngIf="userSignupForm.get('gender')?.errors?.['required']">gender is required</mat-error>
+                <mat-error *ngIf="!userSignupForm.get('password')?.touched && userSignupForm.get('gender')?.errors?.['required']">gender is required</mat-error>
             </mat-radio-group><br>
 
             <mat-form-field class="form-field">
@@ -83,7 +83,7 @@
                 <mat-error *ngIf="userSignupForm.get('confirmPassword')?.errors?.['required']">Confirm Password is
                     requird</mat-error>
             </mat-form-field><br><br>
-            <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+            <button mat-raised-button color="primary" (click)="submit()" [disabled]="!userSignupForm.valid">Submit</button>
 
 
         </form>

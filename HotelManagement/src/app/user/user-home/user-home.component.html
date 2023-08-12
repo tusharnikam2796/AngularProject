@@ -7,7 +7,7 @@
     </div>
     <button mat-raised-button color="accent" (click)="back()">back</button>&nbsp;
 
-    <button routerLink="" mat-raised-button color="accent">My Hotel</button>
+    <button routerLink="" mat-raised-button color="accent"><mat-icon>home</mat-icon>home</button>
 </mat-toolbar><br>
 
 <div>
@@ -27,7 +27,8 @@
             <mat-icon matSuffix (click)="visiblepass()" *ngIf="showPassword">visibility_off</mat-icon>
 
         </mat-form-field><br>
-        <button mat-raised-button color="primary" (click)="login()" class="login-button">login</button><br><br>
+        <button mat-raised-button color="primary" (click)="login()" class="login-button" [disabled]="!userLoginForm.valid">login</button><br><br>
+        <button mat-raised-button color="primary" (click)="forgetPassword()" *ngIf="forgetPass">Forget password..</button><br><br>
         <a routerLink="/user/userSignup">New User Ragistration..?</a>&nbsp;
 
     </form>

@@ -7,6 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { UserSignupComponent } from './user-signup/user-signup.component';
 import { UserSucessComponent } from './user-sucess/user-sucess.component';
 import { BookNowComponent } from './book-now/book-now.component';
+import { UserFilterPipe } from './user-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { BookNowComponent } from './book-now/book-now.component';
     UserSignupComponent,
     UserSucessComponent,
     BookNowComponent,
+    UserFilterPipe,
   ],
   imports: [
     CommonModule,

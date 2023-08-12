@@ -1,3 +1,5 @@
+<div class="container">
+
 <mat-toolbar color="primary">
     <h2 class="h2"><mat-icon> local_hotel</mat-icon>&nbsp;GetSetBooking..</h2>
     <div class="div-home">
@@ -8,8 +10,14 @@
     <button mat-raised-button color="accent" (click)="hotelList()"><mat-icon>list</mat-icon>Hotel list</button>
 </mat-toolbar><br>
 
+<mat-form-field class="seachBox">
+    <mat-label>Search Hotels</mat-label>
+    <input matInput [(ngModel)]="searchBoxValue">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>&nbsp;
 
-<div *ngIf="showTable">
+
+<div *ngIf="showTable" class="div-table">
     <table>
        <tr>
         <th>Hotel name</th>
@@ -20,7 +28,7 @@
         <th>Rooms Class</th>
         <th>Delete</th>
        </tr>
-       <tr *ngFor="let data of hotelDataList ">
+       <tr *ngFor="let data of hotelDataList | adminFilter:searchBoxValue">
         <td>{{data.hotelName}}</td>
         <td>{{data.hotelAddress}}</td>
         <td>{{data.hotelContact}}</td>
@@ -30,4 +38,6 @@
         <td><mat-icon (click)="delete(data.id)">delete</mat-icon></td> 
        </tr>
     </table>
+</div>
+
 </div>

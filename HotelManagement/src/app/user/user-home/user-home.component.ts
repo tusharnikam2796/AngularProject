@@ -15,6 +15,7 @@ export class UserHomeComponent {
   getjouney: any;
   userData: any;
   validUser!: boolean;
+  forgetPass: boolean=false;
 
     constructor(private formBuilder:FormBuilder,private router:Router,
       private commonService:CommonService, private commonApiCallService:CommonApiCallService){}
@@ -23,6 +24,7 @@ export class UserHomeComponent {
       this.myUserLoginForm();
       this.getjouney=this.commonService.journey;
       this.getUserdata();
+      this.forgetPass=this.commonService.forgetPass;
     }
     myUserLoginForm(){
       this.userLoginForm=this.formBuilder.group({
@@ -41,7 +43,9 @@ export class UserHomeComponent {
             this.router.navigateByUrl('user/userSucess');
         }else{
             alert('password is wrong');
+            this.commonService.forgetPass=true;
             this.router.navigateByUrl('user/userHome');
+           
         }
       }
 
@@ -56,6 +60,11 @@ export class UserHomeComponent {
 
     async getUserdata(){
     this.userData=await this.commonApiCallService.getApiCall(this.getjouney).toPromise()
+    }
+
+
+    forgetPassword(){
+
     }
 
 }
