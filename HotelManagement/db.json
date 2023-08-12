@@ -10,17 +10,6 @@
       "password": "Tushar@2796",
       "confirmPassword": "tushar123",
       "id": 1
-    },
-    {
-      "adminName": "",
-      "contact": "",
-      "address": "",
-      "email": "",
-      "adharNumber": "",
-      "gender": "",
-      "password": "",
-      "confirmPassword": "",
-      "id": 2
     }
   ],
   "owner": [

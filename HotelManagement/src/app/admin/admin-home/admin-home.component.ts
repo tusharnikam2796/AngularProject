@@ -28,6 +28,8 @@ export class AdminHomeComponent {
     this.endpoint = this.commonService.journey;
     this.getAdmindata();
     this.adminName=this.commonService.adminName;
+    console.log(this.adminName);
+    
     this.forgetPass = this.commonService.forgetPass;
   }
 
@@ -101,7 +103,8 @@ export class AdminHomeComponent {
      })
      if(admin){
        let request={
-        password:this.adminForgetPasswordForm.value.newPassword
+        password:this.adminForgetPasswordForm.value.newPassword,
+        confirmPassword:this.adminForgetPasswordForm.value.confirmPassword
        }
         await this.commonApiCallService.patchApiCall(this.endpoint,request,admin.id).toPromise()
 
