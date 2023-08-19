@@ -8,18 +8,20 @@
     <button mat-raised-button color="accent" (click)="back()">back</button>&nbsp;
     <button mat-raised-button color="accent" (click)="viewHotels()"><mat-icon>list</mat-icon>View Hotels</button>&nbsp;
     <button routerLink="" mat-raised-button color="accent"><mat-icon>home</mat-icon>home</button>
-</mat-toolbar><br>
+</mat-toolbar>
+
+<div class="searchBox-div"><br>
 <mat-form-field class="seachBox">
   <mat-label>Search Hotels</mat-label>
   <input matInput [(ngModel)]="searchBoxValue">
   <mat-icon matSuffix>search</mat-icon>
 </mat-form-field>&nbsp;
+</div>
 
 <div class="mat-card-div">
     <mat-card class="mat-card" *ngFor="let hotel of hotelData |userFilter:searchBoxValue">
         <mat-card-header>
           <mat-card-title>{{ hotel.hotelName }}</mat-card-title>
-          <!-- <img class="img-mat" mat-card-lg-image src="/assets/images/image4.jpg"  > -->
 
         </mat-card-header>
         <mat-card-content>
@@ -27,6 +29,8 @@
           <p>Hotel Contact: {{ hotel. hotelContact }}</p>
           <p>Rooms Available: {{ hotel.roomsAvailable }}</p>
           <p>Room Class: {{ hotel.roomClass }}</p>
+          <img class="img-mat" mat-card-lg-image src="/assets/images/image4.jpg"  >
+
           <!-- Additional hotel details -->
         </mat-card-content>
         <mat-card-actions>

@@ -7,9 +7,12 @@
 .img-mat{
     width: 200px;
     height: 200px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
 }
 .mat-card-div{
-    background-image: url('/assets/images/image17.jpg');
+    background-image: url('/assets/images/image14.jpg');
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -18,4 +21,7 @@
 }
 .seachBox{
     margin-left: 40%;
+}
+.searchBox-div{
+    background-color:rgba(0, 0, 0, 0.2) ;
 }

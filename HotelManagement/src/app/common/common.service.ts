@@ -12,6 +12,7 @@ export class CommonService {
   id: any;
   dataById: any;
   adminName: any;
+  selfUserName: any;
 
   constructor(private toastrService: ToastrService) { }
 

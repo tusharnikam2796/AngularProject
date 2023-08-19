@@ -140,7 +140,7 @@ export class OwnerHomeComponent {
 
     }
     else{
-      alert('user does not exists');
+      this.commonService.warningToster('warning','user does not exist');
       
     }
   }

@@ -17,12 +17,20 @@
                 <mat-label>AdminName</mat-label>
                 <input matInput formControlName="adminName">
                 <mat-icon matSuffix>account_circle</mat-icon>
+                <mat-hint *ngIf="!adminLoginForm.get('adminName')?.touched">Enter UserName Here</mat-hint>
+                <mat-error *ngIf="adminLoginForm.get('adminName')?.errors?.['required']">UserName is required</mat-error>
+                <mat-error *ngIf="adminLoginForm.get('adminName')?.errors?.['pattern']">pattern is not match</mat-error>
+                <mat-error
+                    *ngIf="adminLoginForm.get('adminName')?.errors?.['pattern'] && adminLoginForm.get('adminName')?.errors?.['minlength']">minimum
+                    2 characters required</mat-error>
             </mat-form-field><br>
             <mat-form-field class="mat-field">
                 <mat-label>Password</mat-label>
                 <input matInput formControlName="password" [type]="showPass? 'text' : 'password'">
                 <mat-icon matSuffix (click)="visiblepass()" *ngIf="!showPass">visibility</mat-icon>
                 <mat-icon matSuffix (click)="visiblepass()" *ngIf="showPass">visibility_off</mat-icon>
+                <mat-hint *ngIf="!adminLoginForm.get('password')?.touched">Enter password Here</mat-hint>
+                <mat-error *ngIf="adminLoginForm.get('password')?.errors?.['required']">password is required</mat-error>
 
             </mat-form-field><br>
             <button mat-raised-button color="primary" (click)="login()" class="login-button">login</button><br><br>

@@ -20,9 +20,9 @@ ngOnInit(){
 }
 myBookNowForm(){
   this.bookNowForm=this.formBuilder.group({
-    fullName:['',[Validators.required]],
-    contact:['',[Validators.required]],
-    email:['',[Validators.required]],
+    fullName:['',[Validators.required,Validators.pattern('[a-zA-Z ]*$'), Validators.minLength(2)]],
+    contact:['',[Validators.required,Validators.pattern('[0-9]*$')]],
+    email:['',[Validators.required,Validators.pattern('[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3}$')]],
     adharNumber:['',[Validators.required]],
     roomClass:['',[Validators.required]],
     paymentMethod:['',[Validators.required]],

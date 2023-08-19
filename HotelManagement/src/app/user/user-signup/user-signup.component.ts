@@ -24,10 +24,10 @@ export class UserSignupComponent {
 
   myUserSignupForm(){
     this.userSignupForm=this.formBuilder.group({
-      userName:['',[Validators.required,]],
-      contact:['',[Validators.required,]],
+      userName:['',[Validators.required, Validators.pattern('[a-zA-Z ]*$'), Validators.minLength(2)]],
+      contact:['',[Validators.required,Validators.pattern('[0-9]*$')]],
       address:['',[Validators.required,]],
-      email:['',[Validators.required,]],
+      email:['',[Validators.required,Validators.pattern('[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3}$')]],
       adharNumber:['',[Validators.required,]],
       gender:['',[Validators.required,]],
       password:['',[Validators.required,]],

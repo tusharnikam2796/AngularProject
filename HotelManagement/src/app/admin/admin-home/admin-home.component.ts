@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonApiCallService } from 'src/app/common/common-api-call.service';
 import { CommonService } from 'src/app/common/common.service';
@@ -35,8 +35,8 @@ export class AdminHomeComponent {
 
   myAdminForm() {
     this.adminLoginForm = this.formBulider.group({
-      adminName: ['', []],
-      password: ['', []]
+      adminName: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9._-]{3,}$'), Validators.minLength(2)]],
+      password: ['', [Validators.required]]
     })
   }
 
@@ -62,9 +62,10 @@ export class AdminHomeComponent {
         }
       })
       if (this.validAdmindata) {
+        this.commonService.sucessToster('sucess','Sucessfully Login')
         this.router.navigateByUrl('admin/adminSucess');
       }else{
-        alert('password is wrong');
+        this.commonService.errorToster('error','incorrect password');
         this.commonService.forgetPass=true;
         this.router.navigateByUrl('admin/adminHome')
         

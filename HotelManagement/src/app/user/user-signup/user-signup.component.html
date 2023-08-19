@@ -22,6 +22,11 @@
                 <input matInput formControlName="userName">
                 <mat-hint *ngIf="!userSignupForm.get('userName')?.touched">Enter user name here</mat-hint>
                 <mat-error *ngIf="userSignupForm.get('userName')?.errors?.['required']">username is requird</mat-error>
+                <mat-error
+                *ngIf="!userSignupForm.get('userName')?.errors?.['pattern'] && userSignupForm.get('userName')?.errors?.['minlength']">minimum
+                2 characters required</mat-error>
+            <mat-error *ngIf="userSignupForm.get('userName')?.errors?.['pattern']">only alphabates
+                accepted</mat-error>
             </mat-form-field>&nbsp;
 
             <mat-form-field class="form-field">
@@ -29,6 +34,8 @@
                 <input matInput formControlName="contact">
                 <mat-hint *ngIf="!userSignupForm.get('contact')?.touched">Enter Contact here</mat-hint>
                 <mat-error *ngIf="userSignupForm.get('contact')?.errors?.['required']">Contact is requird</mat-error>
+                <mat-error *ngIf="userSignupForm.get('contact')?.errors?.['pattern']">pattern is not match</mat-error>
+
             </mat-form-field><br>
 
             <mat-form-field class="form-field1">
@@ -44,6 +51,8 @@
                 <mat-icon matSuffix>email</mat-icon>
                 <mat-hint *ngIf="!userSignupForm.get('email')?.touched">Enter user name here</mat-hint>
                 <mat-error *ngIf="userSignupForm.get('email')?.errors?.['required']">Email is requird</mat-error>
+                <mat-error *ngIf="userSignupForm.get('email')?.errors?.['pattern']">pattern is not match</mat-error>
+
             </mat-form-field>&nbsp;
 
             <mat-form-field class="form-field">

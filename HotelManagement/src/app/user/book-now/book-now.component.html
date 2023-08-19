@@ -1,74 +1,86 @@
 <div class="container">
 
-<mat-toolbar color="primary">
-    <h2 class="h2"><mat-icon> local_hotel</mat-icon>&nbsp;GetSetBooking..</h2>
-    <div class="div-home">
+    <mat-toolbar color="primary">
+        <h2 class="h2"><mat-icon> local_hotel</mat-icon>&nbsp;GetSetBooking..</h2>
+        <div class="div-home">
 
+        </div>
+        <button mat-raised-button color="accent" (click)="back()">back</button>&nbsp;
+        <button routerLink="" mat-raised-button color="accent"><mat-icon>home</mat-icon>home</button>
+    </mat-toolbar><br>
+
+    <div>
+        <form [formGroup]="bookNowForm" class="bookNow-form">
+            <mat-toolbar class="mat-toolbar" color="accent">
+                <span class="span-toolbar"><mat-icon> local_hotel</mat-icon> Hotel Ragistration....</span>
+            </mat-toolbar><br>
+            <mat-form-field class="form-field">
+                <mat-label>Full Name</mat-label>
+                <input matInput formControlName="fullName">
+                <mat-hint *ngIf="!bookNowForm.get('fullName')?.touched">Enter full name here</mat-hint>
+                <mat-error *ngIf="bookNowForm.get('fullName')?.errors?.['required']">this field is required</mat-error>
+                <mat-error
+                    *ngIf="!bookNowForm.get('fullName')?.errors?.['pattern'] && bookNowForm.get('fullName')?.errors?.['minlength']">minimum
+                    2 characters required</mat-error>
+                <mat-error *ngIf="bookNowForm.get('fullName')?.errors?.['pattern']">only alphabates
+                    accepted</mat-error>
+                <mat-error *ngIf="bookNowForm.get('fullName')?.errors?.['whiteSpace']">space is not
+                    required</mat-error>
+            </mat-form-field>&nbsp;
+            <mat-form-field class="form-field">
+                <mat-label>Contact</mat-label>
+                <input matInput formControlName="contact">
+                <mat-hint *ngIf="!bookNowForm.get('contact')?.touched">Enter contact here</mat-hint>
+                <mat-error *ngIf="bookNowForm.get('contact')?.errors?.['required']">this contact required</mat-error>
+                <mat-error *ngIf="bookNowForm.get('contact')?.errors?.['pattern']">pattern is not match</mat-error>
+
+            </mat-form-field><br>
+            <mat-form-field class="form-field1">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email">
+                <mat-hint *ngIf="!bookNowForm.get('email')?.touched">Enter email here</mat-hint>
+                <mat-error *ngIf="bookNowForm.get('email')?.errors?.['required']">this email required</mat-error>
+                <mat-error *ngIf="bookNowForm.get('email')?.errors?.['pattern']">pattern is not match</mat-error>
+            </mat-form-field><br>
+            <mat-form-field class="form-field">
+                <mat-label>Adhar Number</mat-label>
+                <input matInput formControlName="adharNumber">
+                <mat-hint *ngIf="!bookNowForm.get('adharNumber')?.touched">Enter Adhar Number here</mat-hint>
+                <mat-error *ngIf="bookNowForm.get('adharNumber')?.errors?.['required']">this Adhar Number
+                    required</mat-error>
+            </mat-form-field>&nbsp;
+            <mat-form-field class="form-field">
+                <mat-label>Room Class</mat-label>
+                <select matNativeControl required formControlName="roomClass">
+                    <option value="AC-Rooms">AC Rooms</option>
+                    <option value="Non-AC">Non AC</option>
+                    <option value="Genral">Genral</option>
+                </select>
+                <mat-hint *ngIf="!bookNowForm.get('roomClass')?.touched">Enter Room Class here</mat-hint>
+                <mat-error *ngIf="bookNowForm.get('roomClass')?.errors?.['required']">this Room Class
+                    required</mat-error>
+            </mat-form-field><br>
+            <mat-form-field class="form-field">
+                <mat-label>Payment Method</mat-label>
+                <select matNativeControl required formControlName="paymentMethod">
+                    <option value="debit/credit card">debit/credit card</option>
+                    <option value="UPI">UPI</option>
+                    <option value="netBanking">netBanking</option>
+                </select>
+                <mat-hint *ngIf="!bookNowForm.get('paymentMethod')?.touched">Enter Payment Method here</mat-hint>
+                <mat-error *ngIf="bookNowForm.get('paymentMethod')?.errors?.['required']">this Payment Method
+                    required</mat-error>
+            </mat-form-field>&nbsp;
+            <mat-form-field class="form-field">
+                <mat-label>Amount</mat-label>
+                <input matInput formControlName="amount">
+                <mat-hint *ngIf="!bookNowForm.get('amount')?.touched">Enter Amount here</mat-hint>
+                <mat-error *ngIf="bookNowForm.get('amount')?.errors?.['required']">this Amount required</mat-error>
+            </mat-form-field><br>
+            <button mat-raised-button color="primary" (click)="submitDetails()" [disabled]="!bookNowForm.valid">Submit
+                Details </button>&nbsp;
+
+        </form>
     </div>
-    <button mat-raised-button color="accent" (click)="back()">back</button>&nbsp;
-    <button routerLink="" mat-raised-button color="accent"><mat-icon>home</mat-icon>home</button>
-</mat-toolbar><br>
-
-<div>
-    <form [formGroup]="bookNowForm" class="bookNow-form">
-        <mat-toolbar class="mat-toolbar" color="accent">
-            <span class="span-toolbar"><mat-icon> local_hotel</mat-icon> Hotel Ragistration....</span>
-        </mat-toolbar><br>
-        <mat-form-field class="form-field">
-            <mat-label>Full Name</mat-label>
-            <input matInput formControlName="fullName">
-            <mat-hint *ngIf="!bookNowForm.get('fullName')?.touched">Enter full name here</mat-hint>
-            <mat-error *ngIf="bookNowForm.get('fullName')?.errors?.['required']">this field is required</mat-error>
-        </mat-form-field>&nbsp;
-        <mat-form-field class="form-field">
-            <mat-label>Contact</mat-label>
-            <input matInput formControlName="contact">
-            <mat-hint *ngIf="!bookNowForm.get('contact')?.touched">Enter contact here</mat-hint>
-            <mat-error *ngIf="bookNowForm.get('contact')?.errors?.['required']">this contact required</mat-error>
-        </mat-form-field><br>
-        <mat-form-field class="form-field1">
-            <mat-label>Email</mat-label>
-            <input matInput formControlName="email">
-            <mat-hint *ngIf="!bookNowForm.get('email')?.touched">Enter email here</mat-hint>
-            <mat-error *ngIf="bookNowForm.get('email')?.errors?.['required']">this email required</mat-error>
-        </mat-form-field><br>
-        <mat-form-field class="form-field">
-            <mat-label>Adhar Number</mat-label>
-            <input matInput formControlName="adharNumber">
-            <mat-hint *ngIf="!bookNowForm.get('adharNumber')?.touched">Enter Adhar Number here</mat-hint>
-            <mat-error *ngIf="bookNowForm.get('adharNumber')?.errors?.['required']">this Adhar Number
-                required</mat-error>
-        </mat-form-field>&nbsp;
-        <mat-form-field class="form-field">
-            <mat-label>Room Class</mat-label>
-            <select matNativeControl required formControlName="roomClass">
-                <option value="AC-Rooms">AC Rooms</option>
-                <option value="Non-AC">Non AC</option>
-                <option value="Genral">Genral</option>
-            </select>
-            <mat-hint *ngIf="!bookNowForm.get('roomClass')?.touched">Enter Room Class here</mat-hint>
-            <mat-error *ngIf="bookNowForm.get('roomClass')?.errors?.['required']">this Room Class required</mat-error>
-        </mat-form-field><br>
-        <mat-form-field class="form-field">
-            <mat-label>Payment Method</mat-label>
-            <select matNativeControl required formControlName="paymentMethod">
-                <option value="debit/credit card">debit/credit card</option>
-                <option value="UPI">UPI</option>
-                <option value="netBanking">netBanking</option>
-            </select>
-            <mat-hint *ngIf="!bookNowForm.get('paymentMethod')?.touched">Enter Payment Method here</mat-hint>
-            <mat-error *ngIf="bookNowForm.get('paymentMethod')?.errors?.['required']">this Payment Method
-                required</mat-error>
-        </mat-form-field>&nbsp;
-        <mat-form-field class="form-field">
-            <mat-label>Amount</mat-label>
-            <input matInput formControlName="amount">
-            <mat-hint *ngIf="!bookNowForm.get('amount')?.touched">Enter Amount here</mat-hint>
-            <mat-error *ngIf="bookNowForm.get('amount')?.errors?.['required']">this Amount required</mat-error>
-        </mat-form-field><br>
-        <button mat-raised-button color="primary" (click)="submitDetails()" [disabled]="!bookNowForm.valid">Submit Details </button>&nbsp;
-
-    </form>
-</div>
 
 </div>
