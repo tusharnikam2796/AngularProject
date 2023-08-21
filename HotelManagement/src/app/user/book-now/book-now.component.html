@@ -29,19 +29,32 @@
             </mat-form-field>&nbsp;
             <mat-form-field class="form-field">
                 <mat-label>Contact</mat-label>
-                <input matInput formControlName="contact">
+                <input matInput formControlName="contact" maxlength="10">
                 <mat-hint *ngIf="!bookNowForm.get('contact')?.touched">Enter contact here</mat-hint>
                 <mat-error *ngIf="bookNowForm.get('contact')?.errors?.['required']">this contact required</mat-error>
                 <mat-error *ngIf="bookNowForm.get('contact')?.errors?.['pattern']">pattern is not match</mat-error>
 
             </mat-form-field><br>
-            <mat-form-field class="form-field1">
+            <mat-form-field class="form-field">
                 <mat-label>Email</mat-label>
                 <input matInput formControlName="email">
                 <mat-hint *ngIf="!bookNowForm.get('email')?.touched">Enter email here</mat-hint>
                 <mat-error *ngIf="bookNowForm.get('email')?.errors?.['required']">this email required</mat-error>
                 <mat-error *ngIf="bookNowForm.get('email')?.errors?.['pattern']">pattern is not match</mat-error>
-            </mat-form-field><br>
+            </mat-form-field>&nbsp;
+
+            <!-- <mat-form-field class="form-field">
+            <mat-label>date</mat-label>
+            <input matInput formControlName="date">
+            </mat-form-field><br> -->
+            <mat-form-field>
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="date">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            
             <mat-form-field class="form-field">
                 <mat-label>Adhar Number</mat-label>
                 <input matInput formControlName="adharNumber">

@@ -258,6 +258,17 @@
       "paymentMethod": "UPI",
       "amount": "5000",
       "id": 1
+    },
+    {
+      "fullName": "bhushan nikam",
+      "contact": "8925461225",
+      "email": "bhu123@gmail.com",
+      "date": "2023-08-16T18:30:00.000Z",
+      "adharNumber": "245615624565",
+      "roomClass": "AC-Rooms",
+      "paymentMethod": "debit/credit card",
+      "amount": "9000",
+      "id": 2
     }
   ]
 }

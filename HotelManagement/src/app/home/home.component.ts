@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonService } from '../common/common.service';
+import { CommonApiCallService } from '../common/common-api-call.service';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +10,18 @@ import { CommonService } from '../common/common.service';
 })
 export class HomeComponent {
   showLogout:boolean=false;
+  hotelData: any;
 
-constructor(private router:Router,private commonService:CommonService){}
+constructor(private router:Router,private commonService:CommonService,private commonApiCallService:CommonApiCallService){}
+
+ngOnInit(){
+  let endpoint='hotelDetails'
+   this.commonApiCallService.getApiCall(endpoint).subscribe(resp=>{
+    console.log(resp);
+    this.hotelData=resp;
+    
+   })
+}
   
 
 
