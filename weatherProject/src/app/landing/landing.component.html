@@ -1,4 +1,18 @@
-<div class="container">
+<div class="div">
+    <div class="div-searchbar">
+        <mat-form-field class="seachBox">
+            <mat-label>Search Locations</mat-label>
+            <input matInput [(ngModel)]="searchBoxValue">
+            <mat-icon matSuffix (click)="getData()">search</mat-icon>
+        </mat-form-field>&nbsp;
+        <h1>{{searchBoxValue}}</h1>
+        <h2>{{temperature}}°C</h2>
+    </div><br>
+    <div class="div-downside">
+            <img class="icon1" src="/assets/icons/icons8-thermometer-down-48.png" alt="image here">{{min_temp}}°C
+            <img class="icon2" src="/assets/icons/icons8-thermometer-up-48.png" alt="image here">{{max_temp}}°C<br>
+            <img class="icon3" src="/assets/icons/icons8-wind-48.png" alt="image here">{{humidity}}
+            <img class="icon4" src="/assets/icons/icons8-hygrometer-48.png" alt="image here">{{windSpeed }}
 
+    </div>
 </div>
-

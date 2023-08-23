@@ -1,8 +1,52 @@
-.container{
-    height: 500px;
+.div{
+    height: 600px;
     width: 400px;
     border: 2px solid black;
     border-radius: 10px;
     margin-top: 100px;
     margin-left: 35%;
+    background-image: url('/assets/icons/image1.jpg');
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.seachBox{
+    
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.div-searchbar{
+   height: 350px;
+   width: 350px;
+   border: 1px solid black;
+   margin-top: 10px;
+   margin-left: 25px;
+   border-radius: 10px;
+}
+.div-downside{
+    height: 200px;
+    width: 350px;
+    border: 1px solid black;
+    margin-left: 25px;
+    border-radius: 10px;
+}
+.icon1{
+   margin-top: 25px;
+   margin-left: 25px;
+   size: 10px;
+
+}
+.icon2{
+    margin-top: 25px;
+    margin-left: 100px;
+}
+.icon3{
+    margin-top: 50px;
+    margin-left: 25px; 
+}
+.icon4{
+    margin-top: 50px; 
+    margin-left: 100px;
 }
