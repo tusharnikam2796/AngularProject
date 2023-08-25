@@ -9,6 +9,8 @@ import { DataService } from '../data.service';
 export class ParentComponent {
   parentData:any;
   valueChild:any;
+  viewDataChild!:any;
+  value='tushar';
   constructor(private dataService:DataService ){}
 
   set(){

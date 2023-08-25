@@ -8,7 +8,8 @@ import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.com
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { FormComponent } from './form/form.component';
-
+import { Subject1Component } from './subject1/subject1.component';
+import { ViewChildComponent } from './view-child/view-child.component';
 const routes: Routes = [
   {path: '',component:LandingComponent},
   {path: 'landing',component:LandingComponent},
@@ -19,7 +20,10 @@ const routes: Routes = [
   {path:'lifeCycleHooks',component:LifeCycleHooksComponent},
   {path:'parent',component:ParentComponent},
   {path:'child',component:ChildComponent},
-  {path:'form',component:FormComponent}
+  {path:'form',component:FormComponent},
+  {path:'subject1',component:Subject1Component},
+  {path:'viewChild',component:ViewChildComponent},
+
 
 ];
 

@@ -3,10 +3,13 @@
 <input type="text" [(ngModel)]="parentData"><br>
 {{parentData}}<br>
 valuefrom child:{{valueChild}} <br>
+<input type="text" [(ngModel)]="viewDataChild">
 
 -----------------------------------------------------------------------------------
 
-<app-child [dataFromParent]="parentData" (dataFromChild)="getData($event)"></app-child><br>
+<app-child [dataFromParent]="parentData" (dataFromChild)="getData($event)" [viewDataParent]="viewDataChild"></app-child><br>
+<input type="text" [value]="viewDataChild">
+
 -----------------------------------------------------------------------------------
 <app-student-demo></app-student-demo>
 

@@ -117,7 +117,7 @@ export class LandingComponent {
   update(){
     this.commanApiCallService.journey='update';
     let endpoint='owner';
-    this.commanApiCallService.getApiById(endpoint,5).subscribe(response=>{
+    this.commanApiCallService.getApiById(endpoint,4).subscribe(response=>{
       this.data=response;
       
     });
@@ -127,6 +127,13 @@ export class LandingComponent {
       
     }
     
+  }
+  subject(){
+    this.router.navigateByUrl('subject1')
+  }
+
+  viewChild(){
+    this.router.navigateByUrl('viewChild')
   }
 
 }

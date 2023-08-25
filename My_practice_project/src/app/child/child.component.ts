@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class ChildComponent {
   data!:string;
   @Input() dataFromParent:any;
+  @Input() viewDataParent:any;
   @Output() dataFromChild=new EventEmitter <any>;
   constructor(private dataService:DataService,private router:Router){}
   ngOnChanges(){
