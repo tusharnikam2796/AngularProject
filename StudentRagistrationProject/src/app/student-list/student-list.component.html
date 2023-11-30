@@ -2,6 +2,7 @@
     <button (click)="getList()">list</button>
 </div>
 
+<div *ngIf="showTable">
 <table>
     <tr>
         <th>Id</th>
@@ -32,3 +33,4 @@
         <td><button (click)="delete(data.id)">delete</button></td>
     </tr>
 </table>
+</div>

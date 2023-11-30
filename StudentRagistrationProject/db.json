@@ -25,7 +25,7 @@
       "collageFees": "25000",
       "ExamFees": "1200",
       "totalFees": 28200,
-      "passingYear": "",
+      "passingYear": "2019",
       "id": 2
     },
     {
@@ -39,8 +39,22 @@
       "collageFees": "35000",
       "ExamFees": "2000",
       "totalFees": 39000,
-      "passingYear": "",
+      "passingYear": "2018",
       "id": 3
+    },
+    {
+      "name": "kumar shinde",
+      "email": "kumar123@gmail.com",
+      "contact": "8787987897",
+      "address": "mumbai",
+      "birthDate": "1995-11-28",
+      "gender": "Male",
+      "ragistrationFees": "1500",
+      "collageFees": "60000",
+      "ExamFees": "1500",
+      "totalFees": 63000,
+      "passingYear": "2016",
+      "id": 5
     }
   ]
 }

@@ -11,6 +11,7 @@ import { CommonService } from '../common.service';
 export class StudentListComponent {
   studentData:any;
   getData: any;
+showTable: any;
 
 
   constructor(private apiCallService:ApiCallService,private router:Router,private commonService:CommonService){}
@@ -27,8 +28,10 @@ delete(id:number){
     let endpoint = "studentRagistarion";
     this.apiCallService.deleteApiCall(endpoint,id).subscribe(deleteData=>{
       console.log(deleteData);
+      this.showTable=!this.showTable;
   })
-  this.router.navigateByUrl('studentList');
+  // this.router.navigateByUrl('studentList');
+  this.getList();
 }
 edit(id:number){
   this.router.navigateByUrl('contactForm');

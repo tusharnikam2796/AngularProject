@@ -120,18 +120,18 @@
         <label class="label-signup"> Total Fees:</label><br>
         <input class="input-signup" type="text" formControlName="totalFees" [(ngModel)]="totalFees" (click)="calculateTotalFees()"><br><br><br>
         <label class="label-signup">Passout Year</label><br>
-        <select type="passingYear">
-            <option value="2012" formControlName="passingYear"selected>2012</option>
-            <option value="2013" formControlName="passingYear">2013</option>
-            <option value="2014" formControlName="passingYear">2014</option>
-            <option value="2016" formControlName="passingYear">2016</option>
-            <option value="2017" formControlName="passingYear">2017</option>
-            <option value="2018" formControlName="passingYear">2018</option>
-            <option value="2019" formControlName="passingYear">2019</option>
-            <option value="2020" formControlName="passingYear">2020</option>
-            <option value="2021" formControlName="passingYear">2021</option>
-            <option value="2022" formControlName="passingYear">2022</option>
-            <option value="2023" formControlName="passingYear">2023</option>
+        <select type="text" formControlName="passingYear">
+            <option value="2012"selected>2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
           </select><br><br>
         <button class="btn-signup" [disabled]="!signUpForm.valid" (click)="save()">save</button>&nbsp;
 
