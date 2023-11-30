@@ -26,4 +26,10 @@ export class ApiCallService {
     return this.httpClient.delete(url);
   }
 
+  putApiCall(endpoint:any,signUpRequest:any,id?:any){
+    let url=this.commonUrl+endpoint+'/'+id;
+    return this.httpClient.put(url,signUpRequest);
+
+  }
+
 }

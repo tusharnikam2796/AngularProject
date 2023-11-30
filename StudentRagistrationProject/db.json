@@ -27,6 +27,20 @@
       "totalFees": 28200,
       "passingYear": "",
       "id": 2
+    },
+    {
+      "name": "suraj shinde ",
+      "email": "suraj@gmail.com",
+      "contact": "7879797987",
+      "address": "mumbai",
+      "birthDate": "1994-11-13",
+      "gender": "Male",
+      "ragistrationFees": "2000",
+      "collageFees": "35000",
+      "ExamFees": "2000",
+      "totalFees": 39000,
+      "passingYear": "",
+      "id": 3
     }
   ]
 }
