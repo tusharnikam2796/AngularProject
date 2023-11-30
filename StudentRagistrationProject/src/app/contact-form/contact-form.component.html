@@ -1,0 +1,140 @@
+<!-- <form class="row g-3 needs-validation" novalidate>
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">First name</label>
+      <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom02" class="form-label">Last name</label>
+      <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustomUsername" class="form-label">Username</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend">@</span>
+        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+        <div class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationCustom03" class="form-label">City</label>
+      <input type="text" class="form-control" id="validationCustom03" required>
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationCustom04" class="form-label">State</label>
+      <select class="form-select" id="validationCustom04" required>
+        <option selected disabled value="">Choose...</option>
+        <option>...</option>
+      </select>
+      <div class="invalid-feedback">
+        Please select a valid state.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationCustom05" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="validationCustom05" required>
+      <div class="invalid-feedback">
+        Please provide a valid zip.
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+        <label class="form-check-label" for="invalidCheck">
+          Agree to terms and conditions
+        </label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form> -->
+
+  <div class="div-signup">
+    <form class="form-signup" [formGroup]="signUpForm">
+        <h2 class="heading-signup">Ragistration Form</h2><br>
+        <label class="label-signup">Name:</label><br>
+        <input class="input-signup" type="text" formControlName="name" appCharOnly><br>
+        <span class="err-signup1"
+            *ngIf="!signUpForm.get('name')?.touched && !signUpForm.get('name')?.valid && !signUpForm.get ('name')?.dirty">*Hint
+            : enter your name here </span>
+        <span class="err-signup"
+            *ngIf="signUpForm.get('name')?.errors?.['required'] && signUpForm.get('name')?.touched">*name is
+            required</span>
+        <span class="err-signup" *ngIf="signUpForm.get('fullname')?.errors?.['pattern']">*name
+            only should have alphabates</span>
+        <span class="err-signup" *ngIf="signUpForm.get('fullname')?.errors?.['whiteSpace']">*name should not contain
+            white space</span><br>
+
+        <label class="label-signup"> Email:</label><br>
+        <input class="input-signup" type="text" formControlName="email"><br>
+        <span class="err-signup"
+            *ngIf="signUpForm.get('email')?.errors?.['required'] && signUpForm.get('email')?.touched">*email is
+            required</span>
+        <span class="err-signup" *ngIf="signUpForm.get('email')?.errors?.['pattern']">*match the pattern</span><br>
+        <label class="label-signup"> Contact:</label><br>
+        <input class="input-signup" type="text" formControlName="contact" maxlength="10" appNumbersOnly><br>
+        <span class="err-signup"
+            *ngIf="signUpForm.get('contact')?.errors?.['required'] && signUpForm.get('contact')?.touched">*contact is
+            required</span>
+        <span class="err-signup" *ngIf="signUpForm.get('contact')?.errors?.['pattern']">*accept integers only
+        </span><br>
+
+        <label class="label-signup"> Address:</label><br>
+        <input class="input-signup" type="text" formControlName="address"><br>
+        <span class="err-signup"
+        *ngIf="signUpForm.get('address')?.errors?.['required'] && signUpForm.get('address')?.touched">*Address is
+        required</span><br>
+        <label class="label-signup"> BirthDate:</label><br>
+        <input class="input-signup" type="date" formControlName="birthDate"><br>
+        <span class="err-signup"
+        *ngIf="signUpForm.get('birthDate')?.errors?.['required'] && signUpForm.get('birthDate')?.touched">*date of birth is
+        required</span><br>
+        <label class="label-signup"> Gender:</label><br>
+        <input type="radio" name="gender" value="Male" formControlName="gender">Male<br>
+        <input type="radio" name="gender" value="Female" formControlName="gender">Female<br>
+        <input type="radio" name="gender" value="Other" formControlName="gender">Other<br>
+        <span class="err-signup"
+        *ngIf="signUpForm.get('gender')?.errors?.['required'] && signUpForm.get('gender')?.touched">*gender is
+        required</span><br>
+
+        <label class="label-signup"> Ragistration Fees:</label><br>
+        <input class="input-signup" type="text" formControlName="ragistrationFees" [(ngModel)]="registrationFees"><br>
+        <label class="label-signup"> Collage fees:</label><br>
+        <input class="input-signup" type="text" formControlName="collageFees" [(ngModel)]="collegeFees"><br>
+        <label class="label-signup"> Exam Fees:</label><br>
+        <input class="input-signup" type="text" formControlName="ExamFees" [(ngModel)]="examFees" ><br>
+        <label class="label-signup"> Total Fees:</label><br>
+        <input class="input-signup" type="text" formControlName="totalFees" [(ngModel)]="totalFees" (click)="calculateTotalFees()"><br><br><br>
+        <label class="label-signup">Passout Year</label><br>
+        <select type="passingYear">
+            <option value="2012" formControlName="passingYear"selected>2012</option>
+            <option value="2013" formControlName="passingYear">2013</option>
+            <option value="2014" formControlName="passingYear">2014</option>
+            <option value="2016" formControlName="passingYear">2016</option>
+            <option value="2017" formControlName="passingYear">2017</option>
+            <option value="2018" formControlName="passingYear">2018</option>
+            <option value="2019" formControlName="passingYear">2019</option>
+            <option value="2020" formControlName="passingYear">2020</option>
+            <option value="2021" formControlName="passingYear">2021</option>
+            <option value="2022" formControlName="passingYear">2022</option>
+            <option value="2023" formControlName="passingYear">2023</option>
+          </select><br><br>
+        <button class="btn-signup" [disabled]="!signUpForm.valid" (click)="save()">save</button>&nbsp;
+
+    </form>
+
+</div>

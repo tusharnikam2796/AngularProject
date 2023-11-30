@@ -1,0 +1,32 @@
+{
+  "studentRagistarion": [
+    {
+      "name": "tushar tanaji nikam",
+      "email": "tushar123@gmail.com",
+      "contact": "7350375919",
+      "address": "satara",
+      "birthDate": "1996-07-02",
+      "gender": "Male",
+      "ragistrationFees": "2000",
+      "collageFees": "40000",
+      "ExamFees": "1500",
+      "totalFees": 43500,
+      "passingYear": "",
+      "id": 1
+    },
+    {
+      "name": "tushar ",
+      "email": "abc113@gmail.com",
+      "contact": "5955848484",
+      "address": "pune",
+      "birthDate": "2023-11-26",
+      "gender": "Male",
+      "ragistrationFees": "200",
+      "collageFees": "400000",
+      "ExamFees": "15515",
+      "totalFees": 415715,
+      "passingYear": "",
+      "id": 2
+    }
+  ]
+}
