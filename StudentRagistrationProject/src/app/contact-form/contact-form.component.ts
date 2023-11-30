@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiCallService } from '../api-call.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-form',
@@ -17,7 +18,7 @@ export class ContactFormComponent {
   postUrlData: any;
   
 
-constructor(private formBuilder:FormBuilder,private apiCallService:ApiCallService){}
+constructor(private formBuilder:FormBuilder,private apiCallService:ApiCallService,private router:Router){}
 ngOnInit(){
   this.signUpFormControlls();
 }
@@ -64,6 +65,7 @@ save(){
     this.postUrlData=resp
     console.log(resp);
     })
+    this.router.navigateByUrl('');
 }
 // fees = {
 //   registration:0,

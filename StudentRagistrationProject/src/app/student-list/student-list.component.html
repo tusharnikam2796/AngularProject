@@ -1,1 +1,34 @@
-<p>student-list works!</p>
+<div>
+    <button (click)="getList()">list</button>
+</div>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>DOB</th>
+        <th>Ragistation Fees</th>
+        <th>Edit</th>
+        <th>Delete</th>
+
+
+        
+    </tr>
+    <tr *ngFor="let data of studentData">
+        <td>{{data.id}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.contact}}</td>
+        <td>{{data.gender}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.address}}</td>
+        <td>{{data.birthDate}}</td>
+        <td>{{data.ragistrationFees}}</td>
+        <!-- <td><mat-icon matSuffix (click)="edit(data.id)">mode_edit</mat-icon></td> -->
+        <td><button (click)="edit(data.id)">edit</button></td>
+        <td><button (click)="delete(data.id)">delete</button></td>
+    </tr>
+</table>
