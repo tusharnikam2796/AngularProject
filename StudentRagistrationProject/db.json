@@ -55,6 +55,20 @@
       "totalFees": 63000,
       "passingYear": "2016",
       "id": 5
+    },
+    {
+      "name": "swapnil shinde",
+      "email": "swapnil123@gmail.com",
+      "contact": "4545454546",
+      "address": "satara",
+      "birthDate": "2023-12-06",
+      "gender": "Male",
+      "ragistrationFees": "2000",
+      "collageFees": "30000",
+      "ExamFees": "1500",
+      "totalFees": 33500,
+      "passingYear": "2020",
+      "id": 6
     }
   ]
 }

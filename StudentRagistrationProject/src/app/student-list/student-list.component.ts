@@ -18,10 +18,12 @@ showTable: any;
 
 
   getList(){
+    this.showTable=true;
     let endpoint = "studentRagistarion";
     this.apiCallService.getApiCall(endpoint).subscribe(data => {
       console.log(data);
       this.studentData = data;
+      
   })
 }
 delete(id:number){
